@@ -12,18 +12,22 @@
       <link href="/css/website/all.css" rel="stylesheet">
       <!-- Custom styles for this template -->
       <link href="/css/website/style.css" rel="stylesheet">
-      @if(session()->has('message'))
-      <p class="alert alert-success">{{session()->get('message')}}</p>
-  @endif
-  
-  @if(session()->has('error'))
-      <p class="alert alert-danger">{{session()->get('error')}}</p>
-  @endif
    </head>
 
 <body>
     <!-- Navigation -->
-	@include('website.fixed.header')
+    @include('website.fixed.header')
+    <div style="padding-top:40px;">
+        @if(session()->has('message'))
+        <p class="alert alert-success">{{session()->get('message')}}</p>
+    @endif
+    
+    @if(session()->has('error'))
+        <p class="alert alert-danger">{{session()->get('error')}}</p>
+    @endif
+    </div>
+   
+
     <!-- Page Content -->
 
 
