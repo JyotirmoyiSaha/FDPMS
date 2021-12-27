@@ -33,7 +33,6 @@ class UserController extends Controller
         //    dd($request->all());
         User::create([
            'image'=>$filename,
-           'user_type'=>'dealer',
            'name'=>$request->user_name,
            'email'=>$request->user_email,
            'password'=>bcrypt($request->user_password),

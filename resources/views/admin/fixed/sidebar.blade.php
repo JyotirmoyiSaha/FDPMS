@@ -54,7 +54,7 @@
           <li class="nav-item ">
             <a class="nav-link" href="./icons.html">
               <i class="material-icons">inventory_2</i>
-              <p>Distributor</p>
+              <p>Distribution</p>
             </a>
           </li>
           <li class="nav-item ">

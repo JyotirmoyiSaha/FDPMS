@@ -50,7 +50,7 @@
                     @if(auth()->user())
                     <!-- Button trigger modal -->
 
-                    <a href="{{route('user.logout')}}" class="btn btn-success">{{auth()->user()->name}} | Logout</a>
+                    <a href="{{route('user.web.logout')}}" class="btn btn-success">{{auth()->user()->name}} | Logout</a>
 
                     @else
 

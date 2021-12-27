@@ -8,11 +8,14 @@
     body {
         margin: 0;
         padding: 0;
-        background-color: #17a2b8;
+        background-color: #7ee8fa;
+        background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+
         height: 100vh;
     }
+    
     #login .container #login-row #login-column #login-box {
-        margin-top: 120px;
+        margin-top: 60px;
         max-width: 600px;
         height: 320px;
         border: 1px solid #9C9C9C;
@@ -27,7 +30,7 @@
 </style>
 <body>
 <div id="login">
-    <h3 class="text-center text-white pt-5">Login form</h3>
+    <h1 class="text-center text-white pt-5">Login Form</h1>
     <div class="container">
         <div id="login-row" class="row justify-content-center align-items-center">
             <div id="login-column" class="col-md-6">

@@ -3,6 +3,13 @@
 @section('content')
 
 <style>
+  body {
+  display: grid;
+ 
+  height:100vh;
+  background: #7f7fd5;
+  background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+}
   #customers {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;

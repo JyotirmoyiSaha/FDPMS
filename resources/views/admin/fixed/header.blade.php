@@ -1,7 +1,9 @@
+
 <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
-        <div class="container-fluid">
-          <!-- <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:void(0)">Content</a>
+ 
+      </nav> 
+
+      <!--  <a class="navbar-brand" href="javascript:void(0)">Content</a>
           </div>  -->
           <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
@@ -19,11 +21,11 @@
                 </button>
               </div>
             </form>
-            <ul class="navbar-nav">
+           <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="javascript:void(0)">
                   <i class="material-icons">dashboard</i>
-                  <p class="d-lg-none d-md-block">
+                   <p class="d-lg-none d-md-block">
                     Stats
                   </p>
                 </a>
@@ -52,7 +54,4 @@
                   </p>
                 </a>
               </li>
-            </ul>
-          </div> -->
-        </div>
-      </nav>
+            </ul>-->
