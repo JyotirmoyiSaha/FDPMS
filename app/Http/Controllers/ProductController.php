@@ -8,14 +8,18 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
    public function productlist(){
-       return view('admin.pages.product.product-list');
+    $products = Product::with('product_category')->get();
+    $prodlist=ProductCategory::all();
+    //    return view('admin.pages.product.product-list');
+       return view('admin.pages.product.product-list',compact('products','prodlist'));
        $request->validate([
            
        ]);
+      
    }
    public function productcreate(){
-
-    $products = Product::all();
+  
+    $products = Product::with('product_category')->get();
     // dd($products);
     return view('admin.pages.product.product-create',compact('products'));
 }
@@ -41,7 +45,7 @@ class ProductController extends Controller
            'product_name'=>$request->product_name,
            'product_price'=>$request->product_price,
            'product_details'=>$request->product_details,
-           'product_category'=>$request->product_category,
+           'product_category_id'=>$request->product_category,
        ]);
        return redirect()->back()->with('success','Product created successfully.');
    }
@@ -60,7 +64,7 @@ class ProductController extends Controller
    //Product create table database connection
 
    public function procreateStore(Request $request){
-
+    // dd($request->all());
     $filename='';
         if ($request->hasfile('image')) {
             // dd('true');

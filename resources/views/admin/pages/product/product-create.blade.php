@@ -58,7 +58,8 @@
       <td>{{$product->product_name}}</td>
       <td>{{$product->product_price}}</td>
       <td>{{$product->product_details}}</td>
-      <td>{{$product->product_category}}</td>
+      <td>{{$product->product_category->category_name}}</td>
+      {{-- <td>{{$product->category->name}}</td> --}}
       <td>
         <a class="btn btn-danger" href="">delete</a>
         <a class="btn btn-info" href="">edit</a>

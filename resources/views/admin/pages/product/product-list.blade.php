@@ -57,14 +57,13 @@
     <input name="product_details" type="text" class="form-control" id="text" placeholder="Enter product details"required>
   </div>
   <div class="form-group">
-  <label for="category">Category Name</label>
+  {{-- <label for="category">Category Name</label> --}}
   <select id="category" name="product_category">
-    <option value="Organic Fertilizer">Organic Fertilizer</option>
-      <option value="Nitrogen Fertilizer">Nitrogen Fertilizer</option>
-      <option value="Compound Fertilizer">Compound Fertilizer</option>
-      <option value="Nitrogen Fertilizer">Phosphate Fertilizer</option>
-      <option value="Nitrogen Fertilizer">Potassium Fertilizer</option>
-      <option value="Nitrogen Fertilizer">Others Fertilizer</option>
+    <option selected> Category Name </option>
+    @foreach ($prodlist as $item)
+    <option value="{{$item->id}}">{{$item->category_name}}</option>   
+    @endforeach
+
   </select>
   </div>
   <button type="submit" class="btn btn-primary">Add Product</button>

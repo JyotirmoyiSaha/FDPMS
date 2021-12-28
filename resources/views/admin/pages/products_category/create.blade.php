@@ -48,9 +48,9 @@
       <option value="Organic Fertilizer">Organic Fertilizer</option>
       <option value="Nitrogen Fertilizer">Nitrogen Fertilizer</option>
       <option value="Compound Fertilizer">Compound Fertilizer</option>
-      <option value="Nitrogen Fertilizer">Phosphate Fertilizer</option>
-      <option value="Nitrogen Fertilizer">Potassium Fertilizer</option>
-      <option value="Nitrogen Fertilizer">Others Fertilizer</option>
+      <option value="Phosphate Fertilizer">Phosphate Fertilizer</option>
+      <option value="Potassium Fertilizer">Potassium Fertilizer</option>
+      <option value="Others Fertilizer">Others Fertilizer</option>
       
     </select>
 

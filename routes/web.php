@@ -65,7 +65,7 @@ Route::group(['prefix'=>'admin'],function(){
     // database
     Route::post('/product/store',[ProductController::class,'productStore'])->name('admin.product.store');
     
-    //product create Routes
+    //product category create Routes
     Route::get('pro_c-list',[ProductController::class,'prodList'])->name('admin.product_category.prolist');
     Route::get('pro_c-create',[ProductController::class,'prodCreate'])->name('admin.product_category.procreate');
     
