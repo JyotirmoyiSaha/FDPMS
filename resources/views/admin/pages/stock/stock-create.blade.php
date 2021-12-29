@@ -49,19 +49,22 @@
       <input class="form-control form-control-lg"  name="product_image" id="formFileLg" type="file" />
       <br>
       
-       <label for="country">Stock Category Name</label>
-      <select id="country" name="product_category">
-        <option>Pesticite</option>
-        <option>Aque</option>
-        <option>Solid</option>
+       <label for="stock">Stock Category Name</label>
+      <select id="stock" name="product_category">
+      <option value="Organic Fertilizer">Organic Fertilizer</option>
+      <option value="Nitrogen Fertilizer">Nitrogen Fertilizer</option>
+      <option value="Compound Fertilizer">Compound Fertilizer</option>
+      <option value="Phosphate Fertilizer">Phosphate Fertilizer</option>
+      <option value="Potassium Fertilizer">Potassium Fertilizer</option>
+      <option value="Others Fertilizer">Others Fertilizer</option>
       </select>
   
       <label for="lname">Stock Name</label>
       <input type="text" id="lname" name="product_name" placeholder=" stock name..">
   
-      <label for="lname"> Stock Details</label>
+      <label for="lname"> Stock Quantity</label>
       <input type="text" id="lname" name="product_quantity" placeholder="stock quantity..">
-      <input type="submit" value="Submit">
+      <input type="submit" value="Save">
     </form>
   </div>
   </body>

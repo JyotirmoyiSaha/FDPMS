@@ -4,7 +4,7 @@
       <!--Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
         Tip 2: you can also add an image using data-image tag-->
-      <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
+      <div class="logo"><a href="" class="simple-text logo-normal">
          FDPMS
         </a></div>
       <div class="sidebar-wrapper">
@@ -43,6 +43,12 @@
             <a class="nav-link" href="{{route('admin.stock.list')}}">
               <i class="material-icons">production_quantity_limits</i>
               <p>Stock</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{{route('admin.stock.list')}}">
+              <i class="material-icons">production_quantity_limits</i>
+              <p>Dealer Stock</p>
             </a>
           </li>
           <li class="nav-item ">

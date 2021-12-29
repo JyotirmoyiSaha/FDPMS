@@ -70,6 +70,7 @@ Route::group(['prefix'=>'admin'],function(){
     Route::get('product-list',[ProductController::class,'productList'])->name('admin.product.list');
     Route::get('product-create',[ProductController::class,'productCreate'])->name('admin.product.create');
     Route::get('product/view/{product_id}',[ProductController::class,'productDetails'])->name('admin.product.details');
+    Route::get('product/delete/{product_id}',[ProductController::class,'productDelete'])->name('admin.product.delete');
     // database
     Route::post('/product/store',[ProductController::class,'productStore'])->name('admin.product.store');
     
@@ -83,6 +84,7 @@ Route::group(['prefix'=>'admin'],function(){
     //Stock Routes
     Route::get('stock-list',[StockController::class,'stockList'])->name('admin.stock.list');
     Route::get('stock-create',[StockController::class,'stockCreate'])->name('admin.stock.create');
+    Route::get('stock/delete/{stock_id}',[StockController::class,'stockDelete'])->name('admin.stock.delete');
     // database
     Route::post('/stock/store',[StockController::class,'stockStore'])->name('admin.stock.store');
     

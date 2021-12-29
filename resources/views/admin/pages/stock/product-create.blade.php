@@ -29,7 +29,6 @@
   }
   </style>
 
-{{-- searching --}}
 <form action="{{route('admin.product.create')}}" method="GET">
   <div class="row">
       <div class="col-md-4"></div>
@@ -43,11 +42,14 @@
   </form>
   @if($key)
   <h4>
-      Searching for: {{$key}}.found:{{$products->count()}}
+      Your are searching for: {{$key}}. found: {{$products->count()}}
   </h4>
 @endif
-{{-- end searching --}}
 
+
+
+
+  <br>
   <div class="heading">
     <h2>Product List</h2>
   </div>

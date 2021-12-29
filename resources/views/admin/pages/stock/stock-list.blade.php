@@ -39,11 +39,11 @@
 <table id="customers">
   <thead>
     <tr>
-      <th>Stock ID</th>
-      <th>Product Image</th>
-      <th>Product Category</th>
-      <th>Product Name</th>
-      <th>Product Quantity</th>
+      <th>#ID</th>
+      <th>Image</th>
+      <th>Select Category</th>
+      <th> Name</th>
+      <th>Quantity</th>
       <th>Action</th>
   
     </tr>  
@@ -61,7 +61,7 @@
       <td>
         <a class="btn btn-info" href="">Veiw</a>
         <a class="btn btn-Success" href="">Edit</a>
-        <a class="btn btn-danger" href="">Delete</a>
+        <a class="btn btn-danger" href="{{route('admin.stock.delete',$stock->id)}}">Delete</a>
 
       </td>
 

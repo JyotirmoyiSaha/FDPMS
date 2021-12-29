@@ -15,13 +15,26 @@ class ProductController extends Controller
        $request->validate([
            
        ]);
-      
+
    }
    public function productcreate(){
-  
+    $key=null;
+    if(request()->search)
+    {
+        $key=request()->search;
+        $products = Product::with('product_category')
+            ->where('product_name','LIKE','%'.$key.'%')
+            ->orWhere('product_price','LIKE','%'.$key.'%')
+            ->get();
+        return view('admin.pages.product.product-create',compact('products','key'));
+    }
+    $products = Product::with('product_category')->get();
+    return view('admin.pages.product.product-create',compact('products','key'));
+   
+
     $products = Product::with('product_category')->get();
     // dd($products);
-    return view('admin.pages.product.product-create',compact('products'));
+    return view('admin.pages.product.product-create',compact('products','key'));
 }
      //Product table database connection
 
@@ -51,7 +64,11 @@ class ProductController extends Controller
    }
    //Product table database connection end
 
-   //view
+   //search
+  
+
+
+   //view details
    public function productDetails($product_id)
     {
 
@@ -63,6 +80,15 @@ class ProductController extends Controller
     }
       //view end
 
+    //delete
+    
+      public function productDelete($product_id)
+    {
+       Product::find($product_id)->delete();
+       return redirect()->back()->with('success','Product Deleted.');
+    }
+
+   //delete end
 
    //Productcreate table database connection
    public function prodList(){
@@ -91,7 +117,7 @@ class ProductController extends Controller
     'details'=>$request->details,
   
 ]);
-return redirect()->back()->with('success','Product created successfully.');
+return redirect()->route('admin.product.list')->with('success','Product created successfully.');
 
  } 
 }

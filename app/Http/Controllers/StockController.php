@@ -18,7 +18,7 @@ class StockController extends Controller
         // dd($stocks);
             return view('admin.pages.stock.stock-create');
     }
-
+ //stock table database connection start
     public function stockStore(Request $request)
     {
         //    dd($request->all());
@@ -39,8 +39,19 @@ class StockController extends Controller
                'product_name'=>$request->product_name,
                'product_quantity'=>$request->product_quantity,
            ]);
-           return redirect()->back()->with('success','Product created successfully.');
+           return redirect()->route('admin.stock.list')->with('success','Stock Saved successfully.');
         }
+           //Stock table database connection end
+            //delete
+    
+      public function stockDelete($stock_id)
+      {
+         Stock::find($stock_id)->delete();
+         return redirect()->back()->with('success','Stock Deleted.');
+      }
+  
+     //delete end
+  
 
 
 }
