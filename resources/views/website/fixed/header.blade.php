@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Home</a>
+                    <a class="nav-link active" href="{{route('website')}}">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">About</a>
@@ -29,6 +29,9 @@
                         <a class="dropdown-item" href="{{route('website.product')}}">Organic Fertilizer</a>
 
                     </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('website.stock')}}">Stock</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"

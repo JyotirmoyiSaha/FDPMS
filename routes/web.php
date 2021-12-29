@@ -9,8 +9,11 @@ use App\Http\Controllers\RequisitionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
 
+
 //website 
 use App\Http\Controllers\website\ProductController as WebsiteProductController;
+use App\Http\Controllers\website\StockController as WebsiteStockController;
+use App\Http\Controllers\website\HomeController as WebsiteHomeController;
 
 
 
@@ -35,9 +38,13 @@ Route::post('/registration/store',[UserController::class,'registrationstore'])->
 Route::post('/login',[UserController::class,'login'])->name('user.login');
 Route::get('/logout',[UserController::class,'logout'])->name('user.web.logout');
 
-//Product Routes
-
+//Home Routes
+Route::get('/home',[WebsiteHomeController::class,'home'])->name('website');
 Route::get('/product/list',[WebsiteProductController::class,'product'])->name('website.product');
+Route::get('/stock/list',[WebsiteStockController::class,'stock'])->name('website.stock');
+
+
+
 
 
 //for backend
@@ -62,6 +69,7 @@ Route::group(['prefix'=>'admin'],function(){
     //Product Routes
     Route::get('product-list',[ProductController::class,'productList'])->name('admin.product.list');
     Route::get('product-create',[ProductController::class,'productCreate'])->name('admin.product.create');
+    Route::get('product/view/{product_id}',[ProductController::class,'productDetails'])->name('admin.product.details');
     // database
     Route::post('/product/store',[ProductController::class,'productStore'])->name('admin.product.store');
     

@@ -51,6 +51,18 @@ class ProductController extends Controller
    }
    //Product table database connection end
 
+   //view
+   public function productDetails($product_id)
+    {
+
+//        collection= get(), all()====== read with loop (foreach)
+//       object= first(), find(), findOrFail(),======direct
+      $products=Product::find($product_id);
+//      $product=Product::where('id',$product_id)->first();
+        return view('admin.pages.product.product-details',compact('products'));
+    }
+      //view end
+
 
    //Productcreate table database connection
    public function prodList(){

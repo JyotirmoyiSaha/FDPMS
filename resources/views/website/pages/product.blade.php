@@ -2,7 +2,14 @@
 @section('content')
 
 {{-- @dd($producs) --}}
-<div class="row">
+
+
+
+
+
+
+
+{{-- <div class="row">
     <div class="col-lg-4 mb-4">
        <div class="card h-100">
           <h4 class="card-header">Garden Fence</h4>
@@ -16,6 +23,6 @@
              <a href="#" class="btn btn-primary">Learn More</a>
           </div>
        </div>
-    </div>
+    </div> --}}
     
 @endsection

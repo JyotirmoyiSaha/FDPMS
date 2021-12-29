@@ -56,8 +56,9 @@
       <td>Maria Anders</td>
       <td>300</td>
       <td>
-        <a class="btn btn-danger" href="">delete</a>
-        <a class="btn btn-info" href="">edit</a>
+        <a class="btn btn-info" href="">Veiw</a>
+        <a class="btn btn-Success" href="">Edit</a>
+        <a class="btn btn-danger" href="">Delete</a>
     </td>
     </tr>
 </table><br>
