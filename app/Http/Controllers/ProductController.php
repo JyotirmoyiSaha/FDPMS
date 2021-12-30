@@ -17,6 +17,7 @@ class ProductController extends Controller
        ]);
 
    }
+  //productlist
    public function productcreate(){
     $key=null;
     if(request()->search)
@@ -32,9 +33,9 @@ class ProductController extends Controller
     return view('admin.pages.product.product-create',compact('products','key'));
    
 
-    $products = Product::with('product_category')->get();
-    // dd($products);
-    return view('admin.pages.product.product-create',compact('products','key'));
+    // $products = Product::with('product_category')->get();
+    // // dd($products);
+    // return view('admin.pages.product.product-create',compact('products','key'));
 }
      //Product table database connection
 

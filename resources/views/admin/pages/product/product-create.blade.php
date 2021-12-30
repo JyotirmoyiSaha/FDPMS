@@ -42,9 +42,9 @@
   </div>
   </form>
   @if($key)
-  <h4>
+  <h6>
       Searching for: {{$key}}.found:{{$products->count()}}
-  </h4>
+  </h6>
 @endif
 {{-- end searching --}}
 

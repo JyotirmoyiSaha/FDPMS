@@ -41,8 +41,7 @@
     <tr>
       <th>#ID</th>
       <th>Image</th>
-      <th>Select Category</th>
-      <th> Name</th>
+      <th>Stock Item</th>
       <th>Quantity</th>
       <th>Action</th>
   
@@ -53,11 +52,10 @@
     <tr>
       <td>{{$key+1}}</td>
       <td>
-        <img width="100px" src="{{url('/uploads/'.$stock->product_image)}}" alt="">
+        <img width="100px" src="{{url('/uploads/'.$stock->stock_image)}}" alt="">
       </td>
-      <td>{{$stock->product_category}}</td>
-      <td>{{$stock->product_name}}</td>
-      <td>{{$stock->product_quantity}}</td>
+      <td>{{$stock->stock_iteam}}</td>
+      <td>{{$stock->stock_quantity}}</td>
       <td>
         <a class="btn btn-info" href="">Veiw</a>
         <a class="btn btn-Success" href="">Edit</a>

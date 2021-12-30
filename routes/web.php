@@ -54,7 +54,7 @@ Route::group(['prefix'=>'admin'],function(){
     Route::get('/admin/login',[AdminUserController::class,'login'])->name('admin.login');
     Route::post('/admin/do-login',[AdminUserController::class,'doLogin'])->name('admin.doLogin');
     Route::get('/logout',[AdminUserController::class,'logout'])->name('user.logout');
-    Route::group(['middleware'=>'auth'],function(){
+    Route::group(['middleware'=>['auth','admin']],function(){
 
         Route::get('/master', function () {
             return view('master');

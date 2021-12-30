@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Stock;
+use App\Models\Product;
 
 use Illuminate\Http\Request;
 
@@ -14,31 +15,32 @@ class StockController extends Controller
     }
 
     public function stockcreate(){
-        $stocks = Stock::all();
+        $products = Product::all();
         // dd($stocks);
-            return view('admin.pages.stock.stock-create');
+            return view('admin.pages.stock.stock-create',compact('products'));
     }
  //stock table database connection start
     public function stockStore(Request $request)
     {
-        //    dd($request->all());
-        // dd(date('Ymdhms'));
-        $filename='';
-        if ($request->hasfile('product_image')) {
-            // dd('true');
-            $file=$request->file('product_image');
-            $filename=date('Ymdhms').'.'.$file->getClientOriginalExtension();
-            $file->storeAs('/uploads',$filename);
-            // dd($filename);
-            
-        }
+       
+        // dd($request->all());
         // table field name -- input field name
-           Stock::create([
-               'product_image'=>$filename,
-               'product_category'=>$request->product_category,
-               'product_name'=>$request->product_name,
-               'product_quantity'=>$request->product_quantity,
-           ]);
+
+        $checkIfExist=Stock::where('stock_iteam',$request->stock_iteam)->first();
+  
+        if($checkIfExist)
+        {
+
+            $checkIfExist->update([
+                'stock_quantity'=>$checkIfExist->stock_quantity+$request->stock_quantity,
+            ]);
+        }else{
+            Stock::create([
+                'stock_iteam'=>$request->stock_iteam,
+                'stock_quantity'=>$request->stock_quantity,
+            ]);
+        }
+           
            return redirect()->route('admin.stock.list')->with('success','Stock Saved successfully.');
         }
            //Stock table database connection end
