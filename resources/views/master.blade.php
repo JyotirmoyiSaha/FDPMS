@@ -14,34 +14,34 @@
   <!-- Canonical SEO -->
   <link rel="canonical" href="https://www.creative-tim.com/product/material-dashboard-dark" />
   <!--  Social tags      -->
-  <meta name="keywords" content="creative tim, html dashboard, html css dashboard, web dashboard, bootstrap 4 dashboard, bootstrap 4, css3 dashboard, bootstrap 4 admin, material dashboard bootstrap 4 dashboard, frontend, responsive bootstrap 4 dashboard, free dashboard, free admin dashboard, free bootstrap 4 admin dashboard">
-  <meta name="description" content="Material Dashboard Dark Edition is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+  {{-- <meta name="keywords" content="creative tim, html dashboard, html css dashboard, web dashboard, bootstrap 4 dashboard, bootstrap 4, css3 dashboard, bootstrap 4 admin, material dashboard bootstrap 4 dashboard, frontend, responsive bootstrap 4 dashboard, free dashboard, free admin dashboard, free bootstrap 4 admin dashboard"> --}}
+  {{-- <meta name="description" content="Material Dashboard Dark Edition is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design."> --}}
   <!-- Schema.org markup for Google+ -->
-  <meta itemprop="name" content="Material Dashboard Dark Edition by Creative Tim">
-  <meta itemprop="description" content="Material Dashboard Dark Edition is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
-  <meta itemprop="image" content="https://s3.amazonaws.com/creativetim_bucket/products/95/opt_mdb_thumbnail.jpg">
+  {{-- <meta itemprop="name" content="Material Dashboard Dark Edition by Creative Tim"> --}}
+  {{-- <meta itemprop="description" content="Material Dashboard Dark Edition is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design."> --}}
+  {{-- <meta itemprop="image" content="https://s3.amazonaws.com/creativetim_bucket/products/95/opt_mdb_thumbnail.jpg"> --}}
   <!-- Twitter Card data -->
   <meta name="twitter:card" content="product">
   <meta name="twitter:site" content="@creativetim">
   <meta name="twitter:title" content="Material Dashboard Dark Edition by Creative Tim">
-  <meta name="twitter:description" content="Material Dashboard Dark Edition is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
-  <meta name="twitter:creator" content="@creativetim">
+  {{-- <meta name="twitter:description" content="Material Dashboard Dark Edition is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design."> --}}
+  {{-- <meta name="twitter:creator" content="@creativetim"> --}}
   <meta name="twitter:image" content="https://s3.amazonaws.com/creativetim_bucket/products/95/opt_mdb_thumbnail.jpg">
   <!-- Open Graph data -->
   <meta property="fb:app_id" content="655968634437471">
-  <meta property="og:title" content="Material Dashboard Dark Edition by Creative Tim" />
+  {{-- <meta property="og:title" content="Material Dashboard Dark Edition by Creative Tim" /> --}}
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://demos.creative-tim.com/material-dashboard-dark/examples/dashboard.html" />
   <meta property="og:image" content="https://s3.amazonaws.com/creativetim_bucket/products/95/opt_mdb_thumbnail.jpg" />
-  <meta property="og:description" content="Material Dashboard Dark Edition is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design." />
-  <meta property="og:site_name" content="Creative Tim" />
+  {{-- <meta property="og:description" content="Material Dashboard Dark Edition is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design." /> --}}
+  {{-- <meta property="og:site_name" content="Creative Tim" /> --}}
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="../css/dashboard.min.css?v=2.1.0" rel="stylesheet" />
   <!-- Google Tag Manager -->
-  <script>
+  {{-- <script>
     (function(w, d, s, l, i) {
       w[l] = w[l] || [];
       w[l].push({
@@ -56,14 +56,14 @@
         'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
       f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-NKDMSK6');
-  </script>
+  </script> --}}
   <!-- End Google Tag Manager -->
 </head>
 
 <body class="light-edition">
   <!-- Extra details for Live View on GitHub Pages -->
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  {{-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> --}}
   <!-- End Google Tag Manager (noscript) -->
   @include('admin.fixed.sidebar')
     <div class="main-panel">
@@ -118,21 +118,21 @@
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap-material-design.min.js"></script>
-  <script src="https://unpkg.com/default-passive-events"></script>
+  {{-- <script src="https://unpkg.com/default-passive-events"></script> --}}
   <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <!-- Place this tag in your head or just before your close body tag. -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  {{-- <script async defer src="https://buttons.github.io/buttons.js"></script> --}}
   <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd3PjUqq81lIOfBPYXrQGWwK5T4ystZjA"></script>
+  {{-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd3PjUqq81lIOfBPYXrQGWwK5T4ystZjA"></script> --}}
   <!-- Chartist JS -->
-  <script src="../assets/js/plugins/chartist.min.js"></script>
+  {{-- <script src="../assets/js/plugins/chartist.min.js"></script> --}}
   <!--  Notifications Plugin    -->
-  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  {{-- <script src="../assets/js/plugins/bootstrap-notify.js"></script> --}}
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../assets/js/material-dashboard.min.js?v=2.1.0"></script>
+  {{-- <script src="../assets/js/material-dashboard.min.js?v=2.1.0"></script> --}}
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
-  <script>
+  {{-- <script>
     $(document).ready(function() {
       $().ready(function() {
         $sidebar = $('.sidebar');
@@ -177,16 +177,16 @@
           }
         });
 
-        $('.fixed-plugin .background-color .badge').click(function() {
-          $(this).siblings().removeClass('active');
-          $(this).addClass('active');
+        // $('.fixed-plugin .background-color .badge').click(function() {
+        //   $(this).siblings().removeClass('active');
+        //   $(this).addClass('active');
 
-          var new_color = $(this).data('background-color');
+        //   var new_color = $(this).data('background-color');
 
-          if ($sidebar.length != 0) {
-            $sidebar.attr('data-background-color', new_color);
-          }
-        });
+        //   if ($sidebar.length != 0) {
+        //     $sidebar.attr('data-background-color', new_color);
+        //   }
+        // });
 
         $('.fixed-plugin .img-holder').click(function() {
           $full_page_background = $('.full-page-background');
@@ -293,10 +293,10 @@
         });
       });
     });
-  </script>
+  </script> --}}
   <!-- Sharrre libray -->
-  <script src="../assets/demo/jquery.sharrre.js"></script>
-  <script>
+  {{-- <script src="../assets/demo/jquery.sharrre.js"></script> --}}
+  {{-- <script>
     $(document).ready(function() {
 
       $('#facebook').sharrre({
@@ -380,8 +380,8 @@
       }
 
     });
-  </script>
-  <noscript>
+  </script> --}}
+  {{-- <noscript>
     <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=111649226022273&ev=PageView&noscript=1" />
   </noscript>
   <script>
@@ -390,7 +390,7 @@
       md.initDashboardPageCharts();
 
     });
-  </script>
+  </script> --}}
 </body>
 
 </html>

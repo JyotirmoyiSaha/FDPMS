@@ -3,6 +3,11 @@
 @section('content')
 
 <style>
+ body{
+  
+    background: linear-gradient(to left, #ccccff 45%, #ccffff 95%);
+
+ }
   #customers {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -16,7 +21,7 @@
     padding: 8px;
   }
   
-  #customers tr:nth-child(even){background-color: #e4e3e3;}
+  #customers tr:nth-child(even){background-color: #ccccff;}
   
   #customers tr:hover {background-color: #ddd;}
   
@@ -51,8 +56,6 @@
   <div class="heading">
     <h2>Product List</h2>
   </div>
-  
-  <br>
   <a class="btn btn-primary" href="{{route('admin.product.list')}}" role="button">Add Product</a> 
   <table id="customers">
     <thead>

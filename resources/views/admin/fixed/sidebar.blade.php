@@ -23,7 +23,7 @@
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.user.list')}}">
-              <i class="material-icons">person</i>
+              <i class="material-icons">person_pin</i>
               <p>User List</p>
             </a>
           </li>
@@ -35,38 +35,44 @@
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.product_category.prolist')}}">
-              <i class="material-icons">production_quantity_limits</i>
+              <i class="material-icons">category</i>
               <p>Product Category</p>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.stock.list')}}">
-              <i class="material-icons">production_quantity_limits</i>
+              <i class="material-icons">store</i>
               <p>Stock</p>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.stock.list')}}">
-              <i class="material-icons">production_quantity_limits</i>
+              <i class="material-icons">store</i>
               <p>Dealer Stock</p>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.requisition.list')}}">
-              <i class="material-icons">inventory_2</i>
+              <i class="material-icons">add_shopping_cart</i>
               <p>Requisition</p>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="./icons.html">
-              <i class="material-icons">inventory_2</i>
+              <i class="material-icons">shopping_cart_checkout</i>
               <p>Distribution</p>
             </a>
-          </li>
+          </li>  
           <li class="nav-item ">
             <a class="nav-link" href="./map.html">
               <i class="material-icons">payments</i>
               <p>Collection</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{{route('user.logout')}}">
+              <i class="material-icons">logout</i>
+              <p>Logout</p>
             </a>
           </li>
         </ul>

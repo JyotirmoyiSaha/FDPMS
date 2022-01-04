@@ -17,6 +17,7 @@
 <body>
     <!-- Navigation -->
     @include('website.fixed.header')
+    
     <div style="padding-top:40px;">
         @if(session()->has('message'))
         <p class="alert alert-success">{{session()->get('message')}}</p>

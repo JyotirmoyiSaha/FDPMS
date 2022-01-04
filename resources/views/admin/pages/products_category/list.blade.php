@@ -3,6 +3,12 @@
 @section('content')
 
 <style>
+  
+ body{
+  
+    background: linear-gradient(to left, #ccccff 45%, #ccffff 95%);
+
+ }
   #customers {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -16,7 +22,7 @@
     padding: 8px;
   }
   
-  #customers tr:nth-child(even){background-color: #e4e3e3;}
+  #customers tr:nth-child(even){background-color: #ccccff;}
   
   #customers tr:hover {background-color: #ddd;}
   
@@ -28,6 +34,29 @@
     color: white;
   }
   </style>
+  
+
+{{-- searching --}}
+{{-- <form action="{{route('admin.product_category.prolist')}}" method="GET">
+  <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-6">
+          <input value="{{$key}}" type="text" placeholder="Search" name="search" class="form-control">
+      </div>
+      <div class="col-md-2">
+          <button type="submit" class="btn btn-success">Search</button>
+      </div>
+  </div>
+  </form>
+  @if($key)
+  <h6>
+      Searching for: {{$key}}.found:{{$prodList->count()}}
+  </h6>
+@endif --}}
+{{-- end searching --}}
+
+
+
   <br>
   <div class="heading">
     <h2>Product Category List</h2>
@@ -55,24 +84,15 @@
       <td>{{$prodlist->category_name}}</td>
       <td>{{$prodlist->details}}</td>
       <td>
-        <a class="btn btn-danger" href="">delete</a>
-        <a class="btn btn-info" href="">edit</a>
+        <a class="btn btn-info" href="{{route('admin.product_category.details',$prodlist->id)}}">View</a>
+        <a class="btn btn-Sucess" href="">Edit</a>
+        <a class="btn btn-danger" href="{{route('admin.product_category.delete', $prodlist->id)}}">Delete</a>
+        
       </td>
     </tr>    
   
     @endforeach  
   </tbody>
-  {{-- <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-    <td>Alfreds Futterkiste</td>
-    <td>
-      <a class="btn btn-danger" href="">delete</a>
-      <a class="btn btn-info" href="">edit</a>
-
-    </td>
-  </tr> --}}
 
 </table>
 @endsection 

@@ -61,13 +61,9 @@ class ProductController extends Controller
            'product_details'=>$request->product_details,
            'product_category_id'=>$request->product_category,
        ]);
-       return redirect()->back()->with('success','Product created successfully.');
+       return redirect()->route('admin.product.create')->with('success','Product created successfully.');
    }
    //Product table database connection end
-
-   //search
-  
-
 
    //view details
    public function productDetails($product_id)
@@ -76,6 +72,7 @@ class ProductController extends Controller
 //        collection= get(), all()====== read with loop (foreach)
 //       object= first(), find(), findOrFail(),======direct
       $products=Product::find($product_id);
+
 //      $product=Product::where('id',$product_id)->first();
         return view('admin.pages.product.product-details',compact('products'));
     }
@@ -91,7 +88,19 @@ class ProductController extends Controller
 
    //delete end
 
+
+
+
+
+
+
+   
+
+
+
+
    //Productcreate table database connection
+
    public function prodList(){
        $prodlist=ProductCategory::all();
        return view('admin.pages.products_category.list',compact('prodlist'));
@@ -118,7 +127,23 @@ class ProductController extends Controller
     'details'=>$request->details,
   
 ]);
-return redirect()->route('admin.product.list')->with('success','Product created successfully.');
+return redirect()->route('admin.product_category.prolist')->with('success','Product created successfully.');
 
  } 
+
+ //view details
+ public function productCategoryDetails($product_id)
+ {
+
+   $prodlist=Product::find($product_id);
+ return view('admin.pages.products_category.category-details',compact('prodlist'));
+ }
+   //view end
+//delete
+   public function productCategoryDelete($product_id)
+    {
+       Product::find($product_id)->delete();
+       return redirect()->back()->with('success','Product_Category Deleted.');
+    }
+
 }

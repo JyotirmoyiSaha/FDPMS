@@ -1,28 +1,29 @@
 @extends('website.master')
 @section('content')
 
-{{-- @dd($producs) --}}
+{{-- @dd($products) --}}
 
 
 
+<div class="row">
+   @foreach ($products as $product)
+   <div class="col-lg-4 mb-4">
+      <div class="card h-100" >
+         <div class="header">
+             <h3><b>Product Name:</b>{{$product->product_name}} </h3>
+           </div>
 
-
-
-
-{{-- <div class="row">
-    <div class="col-lg-4 mb-4">
-       <div class="card h-100">
-          <h4 class="card-header">Garden Fence</h4>
-          <div class="card-img">
-             <img class="img-fluid" src="images/services-img-01.jpg" alt="" />
-          </div>
-          <div class="card-body">
-             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-          </div>
-          <div class="card-footer">
-             <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
-       </div>
-    </div> --}}
+         <div class="card-body">
+           <p><img src="{{url('uploads/'.$product->product_image)}}" width="300px" height="200px" alt="ProductImage"></p>
+            <h6>Product Price: {{$product->product_price}}</h6>
+            <h6>Product Details: {{$product->product_details}}</h6>
+         </div>
+         <a class="btn btn-primary" href="#" role="button">View all</a>
+         
+      </div>
+       
+       
+    </div>
+    @endforeach
     
 @endsection

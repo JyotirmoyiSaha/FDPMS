@@ -3,7 +3,7 @@
 
 {{-- @dd($producs) --}}
 
-<style>
+{{-- <style>
    .header{
       text-align: center; 
    }
@@ -30,6 +30,6 @@
           <a class="btn btn-primary" href="#" role="button">View all</a>
           
        </div>
-    </div>
+    </div> --}}
     @endforeach
 @endsection

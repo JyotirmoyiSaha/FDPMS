@@ -2,11 +2,6 @@
 
 @section('content')
 
-
-<div class="button">
-  <a href="{{route('user.logout')}}" class="btn btn-secondary" type="button">Logout</a>
-</div>
-
 <style>
 /*-------- global --------*/
 body {

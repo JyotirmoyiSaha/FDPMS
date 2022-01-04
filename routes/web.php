@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\UserController as AdminUserController;
 use App\Http\Controllers\website\ProductController as WebsiteProductController;
 use App\Http\Controllers\website\StockController as WebsiteStockController;
 use App\Http\Controllers\website\HomeController as WebsiteHomeController;
+use App\Http\Controllers\website\AboutController;
 
 
 
@@ -28,10 +29,10 @@ use App\Http\Controllers\website\HomeController as WebsiteHomeController;
 |
 */
 
-
-Route::get('/website', function () {
-    return view('website.pages.home');
-});
+//website
+// Route::get('/website', function () {
+//     return view('website.pages.home');
+// });
 
 Route::get('/registration',[UserController::class,'registration'])->name('user.registration');
 Route::post('/registration/store',[UserController::class,'registrationstore'])->name('user.registration.store');
@@ -41,7 +42,10 @@ Route::get('/logout',[UserController::class,'logout'])->name('user.web.logout');
 //Home Routes
 Route::get('/home',[WebsiteHomeController::class,'home'])->name('website');
 Route::get('/product/list',[WebsiteProductController::class,'product'])->name('website.product');
+Route::get('/product/category/list/{id}',[WebsiteProductController::class,'productCategory'])->name('website.product.category');
+
 Route::get('/stock/list',[WebsiteStockController::class,'stock'])->name('website.stock');
+Route::get('/about',[AboutController::class,'about'])->name('website.about');
 
 
 
@@ -77,10 +81,12 @@ Route::group(['prefix'=>'admin'],function(){
     //product category create Routes
     Route::get('pro_c-list',[ProductController::class,'prodList'])->name('admin.product_category.prolist');
     Route::get('pro_c-create',[ProductController::class,'prodCreate'])->name('admin.product_category.procreate');
-    
+    Route::get('product-category/view/{product_id}',[ProductController::class,'productCategoryDetails'])->name('admin.product_category.details');
+    Route::get('product/category/delete/{product_id}',[ProductController::class,'productCategoryDelete'])->name('admin.product_category.delete');
     // database
-    Route::post('/pro_c-create/store',[ProductController::class,'procreateStore'])->name('admin.product_category.store');
+    Route::post('/category-create/store',[ProductController::class,'procreateStore'])->name('admin.product_category.store');
     
+
     //Stock Routes
     Route::get('stock-list',[StockController::class,'stockList'])->name('admin.stock.list');
     Route::get('stock-create',[StockController::class,'stockCreate'])->name('admin.stock.create');
@@ -99,9 +105,11 @@ Route::group(['prefix'=>'admin'],function(){
     Route::get('dealer-list',[DealerController::class,'dealerList'])->name('admin.dealer.list');
     Route::get('dealer-create',[DealerController::class,'dealerCreate'])->name('admin.dealer.create');
     
+
     //User Routes
-    Route::get('user-create',[UserController::class,'userCreate'])->name('admin.user.create');
     Route::get('user-list',[HomeController::class,'userList'])->name('admin.user.list');
+    Route::get('user/view/{user_id}',[HomeController::class,'userDetails'])->name('admin.user.details');
+    Route::get('user/delete/{user_id}',[HomeController::class,'userDelete'])->name('admin.user.delete');
 
 });
 

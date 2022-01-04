@@ -14,7 +14,7 @@
                     <a class="nav-link active" href="{{route('website')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="{{route('website.about')}}">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="services.html">Servics</a>
@@ -25,13 +25,13 @@
                         Categories
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-
-                        <a class="dropdown-item" href="{{route('website.product')}}">Organic Fertilizer</a>
+                        @foreach($categories as $category){
+                            <a class="dropdown-item" value="{{$category->id}}" href="{{route('website.product.category',$category->id)}}">{{$category->category_name}}</a>
+                        }
+                        @endforeach
+                        
 
                     </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('website.stock')}}">Stock</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
