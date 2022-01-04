@@ -33,52 +33,32 @@
      background-color: #04AA6D;
      color: white;
    }
-   </style>
+</style>
 <br>
 <div class="heading">
-  <h2>Stock List</h2>
+  <h2> Dealer Stock List</h2>
 </div>
 
 <br>
-<a class="btn btn-primary" href="{{route('admin.stock.create')}}" role="button">Add</a>
+<a class="btn btn-primary" href="{{route('admin.dealerstock.create')}}" role="button">Add</a>
 <body>
 <table id="customers">
   <thead>
     <tr>
       <th>#ID</th>
-      <th>Image</th>
       <th>Stock Item</th>
       <th>Quantity</th>
-      <th>Action</th>
   
     </tr>  
   </thead>
   <tbody>
-    @foreach ($stocks as $key=>$stock)
     <tr>
-      <td>{{$key+1}}</td>
-      <td>
-        <img width="100px" src="{{url('/uploads/'.$stock->stock_image)}}" alt="">
-      </td>
-      <td>{{$stock->stock_iteam}}</td>
-      <td>{{$stock->stock_quantity}}</td>
-      <td>
-        <a class="btn btn-info" href="">Veiw</a>
-        <a class="btn btn-danger" href="{{route('admin.stock.delete',$stock->id)}}">Delete</a>
-
-      </td>
-
-
-
-
-    </tr>    
-    @endforeach
+      <td>1</td>
+      <td>jjj</td>
+      <td>12</td>
     
+    </tr>     
   </tbody>
-  
-
-
 </table>
-
 </body>
 @endsection

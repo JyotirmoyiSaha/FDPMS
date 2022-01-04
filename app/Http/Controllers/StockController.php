@@ -26,7 +26,7 @@ class StockController extends Controller
         // dd($request->all());
         // table field name -- input field name
 
-        $checkIfExist=Stock::where('stock_iteam',$request->stock_iteam)->first();
+        $checkIfExist=Stock::where('stock_item',$request->stock_item)->first();
   
         if($checkIfExist)
         {
@@ -36,7 +36,7 @@ class StockController extends Controller
             ]);
         }else{
             Stock::create([
-                'stock_iteam'=>$request->stock_iteam,
+                'stock_item'=>$request->stock_item,
                 'stock_quantity'=>$request->stock_quantity,
             ]);
         }

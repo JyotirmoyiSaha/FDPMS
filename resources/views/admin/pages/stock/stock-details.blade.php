@@ -22,11 +22,6 @@
     <h1>Stock Details</h1>
       <div class="row">
           <div class="col-md-6">
-
-        
-                <p>
-                    <img src="{{url('uploads/'.$stocks->stock_image)}}" width="300px" height="200px" alt="StockImage">
-                </p>
                 <div class="left">
                 <p>Product Details: {{$stock->stock_details}}</p>
                 <p>Product Category: {{$stock->stock_item->category_name}}</p>

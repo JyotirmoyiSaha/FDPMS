@@ -46,7 +46,6 @@
   <thead>
     <tr>
       <th>#ID</th>
-      <th>Image</th>
       <th>Stock Item</th>
       <th>Quantity</th>
       <th>Action</th>
@@ -57,15 +56,11 @@
     @foreach ($stocks as $key=>$stock)
     <tr>
       <td>{{$key+1}}</td>
-      <td>
-        <img width="100px" src="{{url('/uploads/'.$stock->stock_image)}}" alt="">
-      </td>
-      <td>{{$stock->stock_iteam}}</td>
+      <td>{{$stock->stock_item}}</td>
       <td>{{$stock->stock_quantity}}</td>
       <td>
         <a class="btn btn-info" href="">Veiw</a>
         <a class="btn btn-danger" href="{{route('admin.stock.delete',$stock->id)}}">Delete</a>
-
       </td>
 
 

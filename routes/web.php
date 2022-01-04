@@ -4,6 +4,7 @@ use App\Http\Controllers\StockController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DealerController;
+use App\Http\Controllers\DealerstockController;
 use App\Http\Controllers\website\UserController;
 use App\Http\Controllers\RequisitionController;
 use Illuminate\Support\Facades\Route;
@@ -91,7 +92,12 @@ Route::group(['prefix'=>'admin'],function(){
     Route::get('stock-list',[StockController::class,'stockList'])->name('admin.stock.list');
     Route::get('stock-create',[StockController::class,'stockCreate'])->name('admin.stock.create');
     Route::get('stock/delete/{stock_id}',[StockController::class,'stockDelete'])->name('admin.stock.delete');
+
+    //DealerStock
+    Route::get('dealer/stock-list',[DealerstockController::class,'dealerstockList'])->name('admin.dealerstock.list');
+    Route::get('dealer/stock-create',[DealerstockController::class,'dealerstockCreate'])->name('admin.dealerstock.create');
     // database
+    Route::post('/dealerstock/store',[DealerstockController::class,'dealerstockStore'])->name('admin.dealerstock.store');
     Route::post('/stock/store',[StockController::class,'stockStore'])->name('admin.stock.store');
     
     Route::get('register',[RegisterController::class,'register'])->name('admin.register');

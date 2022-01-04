@@ -43,17 +43,15 @@
     <h2>Add Stock From Here!</h2>
   
   <div>
-    <form action="{{route('admin.stock.store')}}"method='POST' enctype="multipart/form-data">
+    <form action="{{route('admin.stock.store')}}" method="POST">
       @csrf
-      <label for="formFileLg" class="form-label">Stock Category Image</label>
-      <input class="form-control form-control-lg"  name="stock_image" id="formFileLg" type="file" />
-      <br>
        <label for="stock">Stock Item</label>
-      <select id="stock" name="stock_iteam">
+      <select id="stock" name="stock_item">
         @foreach ($products as $item)
         <option value="{{$item->id}}">{{$item->product_name}}</option>
         @endforeach
       </select>
+      <br>
       <label for="lname"> Stock Quantity</label>
       <input type="number" id="lname" name="stock_quantity" placeholder="stock quantity..">
       <input type="submit" value="Save">

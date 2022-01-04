@@ -46,7 +46,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="{{route('admin.stock.list')}}">
+            <a class="nav-link" href="{{route('admin.dealerstock.list')}}">
               <i class="material-icons">store</i>
               <p>Dealer Stock</p>
             </a>
