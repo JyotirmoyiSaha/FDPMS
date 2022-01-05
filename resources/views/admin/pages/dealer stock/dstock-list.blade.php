@@ -48,17 +48,26 @@
       <th>#ID</th>
       <th>Stock Item</th>
       <th>Quantity</th>
+      <th>Action</th>
   
     </tr>  
   </thead>
   <tbody>
+    @foreach ($dealerstocks as $key=>$dealerstock)
     <tr>
-      <td>1</td>
-      <td>jjj</td>
-      <td>12</td>
+      <td>{{$key+1}}</td>
+      <td>{{$dealerstock->dealerstock_item}}</td>
+      <td>{{$dealerstock->dealerstock_quantity}}</td>
+      <td>
+        <a class="btn btn-info" href="">Veiw</a>
+        <a class="btn btn-danger" href="">Delete</a>
+      </td>
+
+    </tr>    
+    @endforeach
     
-    </tr>     
   </tbody>
+  
 </table>
 </body>
 @endsection

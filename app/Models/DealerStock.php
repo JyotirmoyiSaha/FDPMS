@@ -8,5 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class DealerStock extends Model
 {
     use HasFactory;
-    protected $guarded=[];
+
+    protected $guarded = [];
+
 }

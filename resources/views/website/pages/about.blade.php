@@ -89,7 +89,7 @@
         <div class="inner-container">
             <h1>About Us</h1>
             <p class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus velit ducimus, enim inventore earum, eligendi nostrum pariatur necessitatibus eius dicta a voluptates sit deleniti autem error eos totam nisi neque voluptates sit deleniti autem error eos totam nisi neque.
+                Fertilizer, a natural or artificial material holding the chemical essentials that help the growth and effectiveness of shops. Fertilizers enhance the natural fertility of the soil or supplant the chemical essentials taken from the soil by former crops. 
             </p>
             <div class="skills">
                 <span>Web Design</span>

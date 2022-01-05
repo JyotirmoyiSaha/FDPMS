@@ -20,7 +20,7 @@ class UsersTableSeeder extends Seeder
         'password'=>bcrypt('123456789'),
         'mobile'=>'01939580333',
         'role'=>'admin',
-        'image'=>'',
+        'image'=>'',  
         'address'=>''
 
 

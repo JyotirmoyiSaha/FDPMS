@@ -47,7 +47,9 @@
         @csrf
        <label for="stock">Stock Item</label>
       <select id="stock" name="dealerstock_item">
-        <option value="id">Aqua</option>
+        @foreach ($products as $item)
+        <option value="{{$item->id}}">{{$item->product_name}}</option>
+        @endforeach
       </select>
       <br>
       <br>
