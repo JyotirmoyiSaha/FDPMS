@@ -34,11 +34,9 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html"> Requisitions</a>
+                    <a class="nav-link" href="{{route('website.requisition')}}"> Requisitions</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('website.stock')}}"> STOCK</a>
-                </li>
+               
                 {{-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">

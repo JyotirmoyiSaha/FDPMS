@@ -40,22 +40,24 @@
 </p>
 @endif
   <body>
-    <h2>Add Stock From Here!</h2> 
+    <h2>Distribute Here!</h2> 
   <div>
      
-      <form action="{{route('admin.dealerstock.store')}}" method="POST">
+      <form action="{{route('admin.distribution.store')}}" method="POST">
         @csrf
-       <label for="stock">Stock Item</label>
-      <select id="stock" name="dealerstock_item">
-        @foreach ($products as $item)
+       <label for="item">Name</label>
+      <select id="item" name="item_name">
+         @foreach ($products as $item)
         <option value="{{$item->product_name}}">{{$item->product_name}}</option>
-        @endforeach
+        @endforeach 
       </select>
       <br>
-      <br>
-      <br>
-      <label for="lname"> Stock Quantity</label>
-      <input type="number" id="lname" name="dealerstock_quantity" placeholder="stock quantity..">
+      <label for="lname">Location</label>
+     <input type="text" id="lname" name="location" placeholder="Distribute Location....">
+     <br>
+     <br>
+     <label for="lname"> Quantity</label>
+      <input type="number" id="lname" name="quantity" placeholder=" quantity....">
       <input type="submit" value="Save">
     </form>
   </div>

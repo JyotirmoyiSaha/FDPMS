@@ -58,7 +58,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./icons.html">
+            <a class="nav-link" href="{{route('admin.distribution.list')}}">
               <i class="material-icons">shopping_cart_checkout</i>
               <p>Distribution</p>
             </a>

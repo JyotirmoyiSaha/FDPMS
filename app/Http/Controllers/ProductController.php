@@ -17,7 +17,7 @@ class ProductController extends Controller
        ]);
 
    }
-  //productlist
+  //productlist search
    public function productcreate(){
     $key=null;
     if(request()->search)
@@ -31,6 +31,7 @@ class ProductController extends Controller
     }
     $products = Product::with('product_category')->get();
     return view('admin.pages.product.product-create',compact('products','key'));
+    //productlist search ed
    
 
     // $products = Product::with('product_category')->get();

@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\StockController;
+use App\Http\Controllers\DistributionController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DealerController;
@@ -13,6 +14,7 @@ use App\Http\Controllers\Admin\UserController as AdminUserController;
 
 //website 
 use App\Http\Controllers\website\ProductController as WebsiteProductController;
+use App\Http\Controllers\website\RequisitionController as WebsiteRequisitionController;
 use App\Http\Controllers\website\StockController as WebsiteStockController;
 use App\Http\Controllers\website\HomeController as WebsiteHomeController;
 use App\Http\Controllers\website\UserprofileController;
@@ -47,6 +49,7 @@ Route::get('/product/list',[WebsiteProductController::class,'product'])->name('w
 Route::get('/product/category/list/{id}',[WebsiteProductController::class,'productCategory'])->name('website.product.category');
 
 Route::get('/stock/list',[WebsiteStockController::class,'stock'])->name('website.stock');
+Route::get('/requisition',[WebsiteRequisitionController::class,'webrequisition'])->name('website.requisition');
 Route::get('/about',[AboutController::class,'about'])->name('website.about');
 
 //userprofile
@@ -122,6 +125,12 @@ Route::group(['prefix'=>'admin'],function(){
     Route::get('user-list',[HomeController::class,'userList'])->name('admin.user.list');
     Route::get('user/view/{user_id}',[HomeController::class,'userDetails'])->name('admin.user.details');
     Route::get('user/delete/{user_id}',[HomeController::class,'userDelete'])->name('admin.user.delete');
+
+    //Distribution
+    Route::get('distribution-list',[DistributionController::class,'distributionList'])->name('admin.distribution.list');
+    Route::get('distribute',[DistributionController::class,'distributionCreate'])->name('admin.distribution.create');
+    Route::post('/distribution/store',[DistributionController::class,'distributionStore'])->name('admin.distribution.store');
+
 
 });
 
