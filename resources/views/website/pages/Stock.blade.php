@@ -31,5 +31,19 @@
           
        </div>
     </div> --}}
-    @endforeach
+
+    <div class='container'>
+        <h1 class="text-center">Requisition</h1>
+      <div style="display: flex; justify-content:space-between">
+        <div class='form-group'>
+            <label style='font-weight: bold;'>Date</label>
+            <input type='date' />
+        </div>
+        <div class='form-group'>
+         <label style='font-weight: bold;'>Date</label>
+         <input type='date' />
+     </div>
+      </div>
+    </div>
+      
 @endsection

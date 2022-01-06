@@ -33,7 +33,13 @@
 
                     </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html"> Requisitions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('website.stock')}}"> STOCK</a>
+                </li>
+                {{-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         Requisitions
@@ -42,10 +48,18 @@
                         <a class="dropdown-item" href="portfolio-1-col.html">Stock Iteam</a>
                         <a class="dropdown-item" href="portfolio-2-col.html">Quatity</a>
                     </div>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact</a>
                 </li>
+                @if(Auth::check())
+                <li class="nav-item">
+                  <a class="nav-link" href="{{route('website.userprofile')}}">Profile</a>
+                </li>
+                @endif
+              
+
+                
 
 
                 <li class="nav-item">

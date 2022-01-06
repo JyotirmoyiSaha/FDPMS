@@ -30,7 +30,7 @@
      padding-top: 12px;
      padding-bottom: 12px;
      text-align: left;
-     background-color: #04AA6D;
+     background-color: rgb(9, 24, 68);
      color: white;
    }
    </style>
@@ -59,7 +59,7 @@
       <td>{{$stock->stock_item}}</td>
       <td>{{$stock->stock_quantity}}</td>
       <td>
-        <a class="btn btn-info" href="">Veiw</a>
+        
         <a class="btn btn-danger" href="{{route('admin.stock.delete',$stock->id)}}">Delete</a>
       </td>
 

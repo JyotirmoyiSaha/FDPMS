@@ -30,7 +30,7 @@
     }
     
     .inner-container{
-        width: 55%;
+        width: 56%;
         float: right;
         background-color: #fdfdfd;
         padding: 150px;

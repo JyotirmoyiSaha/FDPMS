@@ -30,9 +30,23 @@
      padding-top: 12px;
      padding-bottom: 12px;
      text-align: left;
-     background-color: #04AA6D;
+     background-color: rgb(9, 24, 68);
      color: white;
    }
+   /* button design */
+   .btn {
+  background-color: rgb(9, 24, 68);
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: rgb(5, 31, 109);
+}
 </style>
 <br>
 <div class="heading">
@@ -59,8 +73,9 @@
       <td>{{$dealerstock->dealerstock_item}}</td>
       <td>{{$dealerstock->dealerstock_quantity}}</td>
       <td>
-        <a class="btn btn-info" href="">Veiw</a>
-        <a class="btn btn-danger" href="">Delete</a>
+        <a class="btn" href=""><i class="fa fa-view"></i> </a>
+        <a class="btn" href=""><i class="fa fa-edit"></i> </a>
+        <a class="btn" herf=""><i class="fa fa-trash"></i></a>
       </td>
 
     </tr>    

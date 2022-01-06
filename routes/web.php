@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\UserController as AdminUserController;
 use App\Http\Controllers\website\ProductController as WebsiteProductController;
 use App\Http\Controllers\website\StockController as WebsiteStockController;
 use App\Http\Controllers\website\HomeController as WebsiteHomeController;
+use App\Http\Controllers\website\UserprofileController;
 use App\Http\Controllers\website\AboutController;
 
 
@@ -31,9 +32,9 @@ use App\Http\Controllers\website\AboutController;
 */
 
 //website
-// Route::get('/website', function () {
-//     return view('website.pages.home');
-// });
+    //   Route::get('/website', function (){ 
+    //       return view('website.pages.home');
+    //    });
 
 Route::get('/registration',[UserController::class,'registration'])->name('user.registration');
 Route::post('/registration/store',[UserController::class,'registrationstore'])->name('user.registration.store');
@@ -47,6 +48,11 @@ Route::get('/product/category/list/{id}',[WebsiteProductController::class,'produ
 
 Route::get('/stock/list',[WebsiteStockController::class,'stock'])->name('website.stock');
 Route::get('/about',[AboutController::class,'about'])->name('website.about');
+
+//userprofile
+Route::get('/userprofile',[UserprofileController::class,'userprofile'])->name('website.userprofile');
+
+
 
 
 
