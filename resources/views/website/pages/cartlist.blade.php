@@ -1,4 +1,4 @@
-@extends('master')
+@extends('website.master')
 
 @section('content')
 
@@ -37,22 +37,27 @@
   </style>
   <br>
   <div class="heading">
-    <h2>Requisition Table</h2>
+    <h2>Cart List</h2>
   </div>
+  
   <br>
-  {{-- <a class="btn btn-outline-success" href="{{route('admin.requisition.details')}}" role="button">Requisition Details</a> --}}
   <table id="customers">
     <tr>
-      <th>Requisition ID</th>
-      <th>Requisition By</th>
-      <th> Total Amount</th>
+      <th> ID</th>
+      <th>Product Name</th>
+      <th>Product Quantity</th>
+      <th> Product Price</th>
+      <th>Subtotal</th>
     </tr>
-    @foreach ($requisitionlists as $key=> $requisitionlist)
+    @foreach($cartlists as $key=>$cartlist)
     <tr>
-      <td>{{$requisitionlist->user_id}}</td>
-      <td>{{$requisitionlist->user_id}}</td>
-      <td>{{$requisitionlist->item_name}}</td>
+      <td>{{$key+1}}</td>
+      <td>{{$cartlist->product_name}}</td>
+      <td>{{$cartlist->product_quantity}}</td>
+      <td>{{$cartlist->product_price}}</td>
+      <td>{{$cartlist->product_price*$cartlist->product_quantity}}</td>
     </tr>
     @endforeach
-</table>
+  </table>
+<a class="btn btn-primary" href="{{route('website.cartconfirm',$cartlists->first()->user_id??0)}}" role="button">Confirm</a>
 @endsection 

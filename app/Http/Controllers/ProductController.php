@@ -59,6 +59,7 @@ class ProductController extends Controller
            'product_image'=>$filename,
            'product_name'=>$request->product_name,
            'product_price'=>$request->product_price,
+           'dealer_price'=>$request->dealer_price,
            'product_details'=>$request->product_details,
            'product_category_id'=>$request->product_category,
        ]);
@@ -100,7 +101,7 @@ class ProductController extends Controller
 
 
 
-   //Productcreate table database connection
+   //Productcategory
 
    public function prodList(){
        $prodlist=ProductCategory::all();

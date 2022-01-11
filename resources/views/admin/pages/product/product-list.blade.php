@@ -53,6 +53,10 @@
     <input name="product_price" type="text" class="form-control" id="text" placeholder="Enter product price"required>
   </div>
   <div class="form-group">
+    <label for="exampleInputPassword1">Dealer Price</label>
+    <input name="dealer_price" type="text" class="form-control" id="text" placeholder="Enter dealer product price"required>
+  </div>
+  <div class="form-group">
     <label for="exampleInputPassword1">Details</label>
     <input name="product_details" type="text" class="form-control" id="text" placeholder="Enter product details"required>
   </div>

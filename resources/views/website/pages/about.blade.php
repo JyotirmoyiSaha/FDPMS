@@ -22,18 +22,19 @@
     }
     
     .about-section{
-        background: url(/images/pic.jpg) no-repeat left;
+        background: url(/images/a.jpg) no-repeat left;
         background-size: 55%;
         background-color: #fdfdfd;
         overflow: hidden;
-        padding: 100px 0;
+        padding: 50px 0; 
     }
     
     .inner-container{
-        width: 56%;
+        width: 55%;
         float: right;
         background-color: #fdfdfd;
-        padding: 150px;
+        /* padding: 150px; */
+        padding: 115px;
     }
     
     .inner-container h1{

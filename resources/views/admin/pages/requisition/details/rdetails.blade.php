@@ -35,12 +35,13 @@
   
   <br>
 
-  <a class="btn btn-primary" href="{{route('admin.stock.create')}}" role="button">Add</a>
+  
   <table id="customers">
     <tr>
       <th>ID</th>
       <th>Requisition ID</th>
       <th>Item ID</th>
+      <th>Item Name</th>
       <th>Item Price</th>
       <th>Item Quatity</th>
       <th>Item Subtotal</th>
@@ -48,16 +49,24 @@
   
     </tr>
     <tr>
-      <td>1</td>
-      <td>Maria Anders</td>
-      <td>300</td>
-      <td>1</td>
-      <td>Maria Anders</td>
-      <td>300</td>
+
+      @foreach ($requisitiondetails as $key=>$requisitiondetail)
+    <tr>
+      <td>{{$key+1}}</td>
+      <td>{{$requisitiondetail->user_id}}</td>
+      <td>{{$requisitiondetail->item_id}}</td>
+      <td>{{$requisitiondetail->item_name}}</td>
+      <<td>{{$requisitiondetail->item_price}}</td>
+      <td>{{$requisitiondetail->item_quantity}}</td>
+      <td>{{$requisitiondetail->item_subtotal}}</td>
       <td>
-        <a class="btn btn-danger" href="">delete</a>
-        <a class="btn btn-info" href="">edit</a>
-    </td>
-    </tr>
+        <form action="{{route('action',$requisitiondetail->id)}}", method="POST">
+          @csrf
+          <button class="btn btn-info" type="submit" name="action" value="Approve">Aprove</button>
+        </form>
+        <a class="btn btn-danger" href="">Deny</a>
+      </td>
+    </tr>    
+    @endforeach
 </table>
 @endsection 

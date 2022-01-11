@@ -25,17 +25,19 @@
                         Categories
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                        @foreach($categories as $category){
+                        @foreach($categories as $category)
                             <a class="dropdown-item" value="{{$category->id}}" href="{{route('website.product.category',$category->id)}}">{{$category->category_name}}</a>
-                        }
+                        
                         @endforeach
                         
 
                     </div>
                 </li>
+                @if(Auth::check())
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('website.requisition')}}"> Requisitions</a>
                 </li>
+                @endif
                
                 {{-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
@@ -135,7 +137,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">User Type</label>
-                        <input name="type" type="text" class="form-control" placeholder="Enter user address">
+                        <input name="type" type="text" class="form-control" placeholder="Enter user type">
                     </div>
                 </div>
                 <div class="modal-footer">

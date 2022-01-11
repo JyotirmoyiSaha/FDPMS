@@ -15,12 +15,12 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item ">
+          {{-- <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.dealer.list')}}">
             <i class="material-icons">person</i>
               <p>Dealer List</p>
             </a>
-          </li>
+          </li> --}}
           <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.user.list')}}">
               <i class="material-icons">person_pin</i>
@@ -52,9 +52,15 @@
             </a>
           </li>
           <li class="nav-item ">
+            <a class="nav-link" href="{{route('admin.requisition.details')}}">
+              <i class="material-icons">add_shopping_cart</i>
+              <p>Requisition Details</p>
+            </a>
+          </li>
+          <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.requisition.list')}}">
               <i class="material-icons">add_shopping_cart</i>
-              <p>Requisition</p>
+              <p>Requisition Total</p>
             </a>
           </li>
           <li class="nav-item ">

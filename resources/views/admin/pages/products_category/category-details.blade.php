@@ -24,7 +24,7 @@
           <div class="col-md-6">
         
             <p>
-                <img src="{{url('uploads/'.$prodlist->image)}}" width="300px" height="200px" alt="ProductImage">
+                <img src="{{url('uploads/'.$prodlist->image)}}" width="300px" height="200px" alt="ProductCategoryImage">
             </p>
             <div class="left">
             <p>Product Category:{{$prodlist->category_name}}</p>

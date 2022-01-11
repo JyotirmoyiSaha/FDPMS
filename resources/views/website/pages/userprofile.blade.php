@@ -30,8 +30,8 @@
               
 
       <div class="text-center">
-        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
-        <h6>Upload Picture...</h6>
+        <img src="{{url('/uploads/',auth()->user()->image)}}" class="avatar img-circle img-thumbnail" alt="avatar">
+        <h6>{{auth()->user()->name}}</h6>
         <input type="file" class="text-center center-block file-upload">
       </div>
     

@@ -75,15 +75,17 @@ body {
     margin: 17px auto 18px auto;
     text-align: center;
 }
-.card-front h4 {
+/* .card-front h4 {
 	font-size: 18px;
 	font-weight: normal;
 	margin: 10px 0;
-}
+} */
 .card-front p.detail {
-	font-size: 24px;
-	font-weight: bold;
-	margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px;
+    padding: 22px;
+    text-align: center;
 }
 .card-front.bg-violet {
 	background-color: #702082;
@@ -103,15 +105,18 @@ body {
 	transform: rotateY(-180deg);
 }
 .card-back p.title {
-	color: #000;
-	margin-top: 0;
-	
+    color: #000;
+    margin-top: 11px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
 }
 .card-back p.desc {
 	color: #63666a;
 }
 .card-back a.link {
 	color: #702082;
+    margin: 60px;
 }
 .card-back.bg-violet {
 	background-color: #d8d7df;
@@ -154,13 +159,13 @@ body {
             <div class="flex-item-inner">
                 <!-- card -->
                 <a href="#">
-                      <div class="card-front bg-violet">
+                    <div class="card-front bg-blue">
                           <i class="fa fa-pie-chart fa-3x tile-icon icon-white"></i>
                           <p class="detail">User Info</p>
                       </div>
-                      <div class="card-back bg-violet">
+                      <div class="card-back bg-blue">
                           <p class="title"><b> User Information</b></p>
-                          <p class="desc">View the user Information</p>
+                          <p class="desc">View the all user Information</p>
                           <a href="{{route('admin.user.list')}}" class="link">View <i class="fa fa-chevron-circle-right"></i></a>
                       </div>
                   </a>
@@ -174,15 +179,34 @@ body {
             <div class="flex-item-inner">
                 <!-- card -->
                   <a href="#">
-                      <div class="card-front bg-magenta">
-                          <i class="fa fa-heart fa-3x tile-icon icon-white"></i>
-                          <h4>HSA Total Balance</h4>
-                          <p class="detail">$XXX,XXX</p>
+                      <div class="card-front bg-blue">
+                        <i class="fa fa-cart-plus fa-3x tile-icon icon-white"></i>
+                          <p class="detail">Product</p>
                       </div>
-                      <div class="card-back bg-magenta">
-                          <p class="title">Praesent varius mi sem</p>
-                          <p class="desc">Cras posuere consequat nisl, ut rhoncus odio finibus sit amet. Sed consectetur dapibus.</p>
-                          <a class="link">View <i class="fa fa-chevron-circle-right"></i></a>
+                      <div class="card-back bg-blue">
+                          <p class="title">Product Information</p>
+                          <p class="desc">View all product information </p>
+                          <a href="{{route('admin.product.create')}}" class="link">View <i class="fa fa-chevron-circle-right"></i></a>
+                      </div>
+                  </a>
+                  <!-- /card -->
+              </div>
+          </div>
+          <!-- /flex-item -->
+
+         <!-- flex-item -->
+         <div class="flex-item">
+            <div class="flex-item-inner">
+                <!-- card -->
+                  <a href="#">
+                      <div class="card-front bg-blue">
+                        <i class="fa fa-cart-plus fa-3x tile-icon icon-white"></i>
+                          <p class="detail">Product Category</p>
+                      </div>
+                      <div class="card-back bg-blue">
+                          <p class="title">Product Category Information</p>
+                          <p class="desc">View all product category information </p>
+                          <a href="{{route('admin.product_category.prolist')}}" class="link">View <i class="fa fa-chevron-circle-right"></i></a>
                       </div>
                   </a>
                   <!-- /card -->
@@ -196,15 +220,53 @@ body {
             <div class="flex-item-inner">
                 <!-- card -->
                   <a href="#">
-                      <div class="card-front bg-green">
+                    <div class="card-front bg-blue">
                           <i class="fa fa-bar-chart fa-3x tile-icon icon-white"></i>
-                          <h4>Savings Plan Total Balance</h4>
-                          <p class="detail">$XXX,XXX</p>
+                          <p class="detail">Stock</p>
                       </div>
-                      <div class="card-back bg-green">
-                          <p class="title">Curabitur elementum augue</p>
-                          <p class="desc">Nullam porttitor dui quis commodo mattis. Fusce posuere, nisl id ultrices pellentesque.</p>
-                          <a class="link">View <i class="fa fa-chevron-circle-right"></i></a>
+                      <div class="card-back bg-blue">
+                          <p class="title">Stock List</p>
+                          <p class="desc">View stock informaion</p>
+                          <a href="{{route('admin.stock.list')}}" class="link">View <i class="fa fa-chevron-circle-right"></i></a>
+                      </div>
+                  </a>
+                  <!-- /card -->
+              </div>
+          </div>
+          <!-- flex-item -->
+           <!-- flex-item -->
+           <div class="flex-item">
+            <div class="flex-item-inner">
+                <!-- card -->
+                  <a href="#">
+                    <div class="card-front bg-blue">
+                          <i class="fa fa-bar-chart fa-3x tile-icon icon-white"></i>
+                          <p class="detail">Dealer Stock</p>
+                      </div>
+                      <div class="card-back bg-blue">
+                          <p class="title">Stock List</p>
+                          <p class="desc">View stock informaion</p>
+                          <a href="{{route('admin.dealerstock.list')}}" class="link">View <i class="fa fa-chevron-circle-right"></i></a>
+                      </div>
+                  </a>
+                  <!-- /card -->
+              </div>
+          </div>
+          <!-- flex-item -->
+
+                     <!-- flex-item -->
+          <div class="flex-item">
+            <div class="flex-item-inner">
+                <!-- card -->
+                  <a href="#">
+                    <div class="card-front bg-blue">
+                        <i class="fa fa-cart-arrow-right fa fa-sun-o fa-3x tile-icon icon-white"></i>
+                          <p class="detail">Requisition</p>
+                      </div>
+                      <div class="card-back bg-blue">
+                          <p class="title"> Requisition Deails </p>
+                          <p class="desc">View requisition request and details information </p>
+                          <a href="{{route('admin.requisition.list')}}" class="link">View <i class="fa fa-chevron-circle-right"></i></a>
                       </div>
                   </a>
                   <!-- /card -->
@@ -213,40 +275,18 @@ body {
           <!-- flex-item -->
 
                     <!-- flex-item -->
-                    <div class="flex-item">
-                      <div class="flex-item-inner">
-                          <!-- card -->
-                            <a href="#">
-                                <div class="card-front bg-green">
-                                    <i class="fa fa-bar-chart fa-3x tile-icon icon-white"></i>
-                                    <h4>Savings Plan Total Balance</h4>
-                                    <p class="detail">$XXX,XXX</p>
-                                </div>
-                                <div class="card-back bg-green">
-                                    <p class="title">Curabitur elementum augue</p>
-                                    <p class="desc">Nullam porttitor dui quis commodo mattis. Fusce posuere, nisl id ultrices pellentesque.</p>
-                                    <a class="link">View <i class="fa fa-chevron-circle-right"></i></a>
-                                </div>
-                            </a>
-                            <!-- /card -->
-                        </div>
-                    </div>
-                    <!-- flex-item -->
-
-                    <!-- flex-item -->
           <div class="flex-item">
             <div class="flex-item-inner">
                 <!-- card -->
                 <a href="#">
                       <div class="card-front bg-blue">
-                          <i class="fa fa-sun-o fa-3x tile-icon icon-white"></i>
-                          <h4>Your Paid Time Off Balance</h4>
+                          <i class="fa fa-cart-arrow-down fa fa-sun-o fa-3x tile-icon icon-white"></i>
                           <p class="detail">Distriubtion</p>
                       </div>
                       <div class="card-back bg-blue">
-                          <p class="title">Vestibulum eget sem malesuada</p>
-                          <p class="desc">Etiam imperdiet ullamcorper dolor sit amet molestie. Quisque eu nibh in ligula.</p>
-                          <a class="link">View <i class="fa fa-chevron-circle-right"></i></a>
+                          <p class="title">Distribute Info</p>
+                          <p class="desc">View distribute details<p>
+                        <a href="{{route('admin.distribution.list')}}" class="link">View <i class="fa fa-chevron-circle-right"></i></a>
                       </div>
                   </a>
                   <!-- /card -->

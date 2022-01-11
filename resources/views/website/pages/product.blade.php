@@ -18,7 +18,7 @@
             <h6>Product Price: {{$product->product_price}}</h6>
             <h6>Product Details: {{$product->product_details}}</h6>
          </div>
-         <a class="btn btn-primary" href="#" role="button">View all</a>
+         {{-- <a class="btn btn-primary" href="{{route('website.request',$product->id)}}" role="button">Request</a> --}}
          
       </div>
        

@@ -9,6 +9,9 @@
      body{
          text-align: center;
          align-content: center; 
+         background: linear-gradient(to left, #ccccff 45%, #ccffff 95%);
+
+
      }
      .left{
          text-align: left;

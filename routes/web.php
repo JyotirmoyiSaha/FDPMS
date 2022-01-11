@@ -48,14 +48,26 @@ Route::get('/home',[WebsiteHomeController::class,'home'])->name('website');
 Route::get('/product/list',[WebsiteProductController::class,'product'])->name('website.product');
 Route::get('/product/category/list/{id}',[WebsiteProductController::class,'productCategory'])->name('website.product.category');
 
+//stock
 Route::get('/stock/list',[WebsiteStockController::class,'stock'])->name('website.stock');
+//requisition
 Route::get('/requisition',[WebsiteRequisitionController::class,'webrequisition'])->name('website.requisition');
+Route::get('/requisition-create',[WebsiteRequisitionController::class,'webrequisitionCreate'])->name('website.requisition.create');
+Route::post('/requisition/store',[WebsiteRequisitionController::class,'webrequisitionstore'])->name('website.requisition.store');
+
+//for cart
+Route::get('/cartlist',[WebsiteRequisitionController::class,'cartList'])->name('website.cart');
+Route::get('/cartconfirm/{id}',[WebsiteRequisitionController::class,'cartconfirm'])->name('website.cartconfirm');
+
+//about
 Route::get('/about',[AboutController::class,'about'])->name('website.about');
 
 //userprofile
 Route::get('/userprofile',[UserprofileController::class,'userprofile'])->name('website.userprofile');
 
-
+//request
+Route::get('/request/{request_id}',[WebsiteRequisitionController::class,'request'])->name('website.request');
+Route::post('/request/store/{request_id}',[WebsiteRequisitionController::class,'requeststore'])->name('website.request.store');
 
 
 
@@ -114,7 +126,10 @@ Route::group(['prefix'=>'admin'],function(){
     
     //Requisition Routes
     Route::get('rlist',[RequisitionController::class,'rList'])->name('admin.requisition.list');
+    Route::post('rlist/store',[RequisitionController::class,'rListStore'])->name('admin.requisition.list.store');
     Route::get('rdetails',[RequisitionController::class,'rDetails'])->name('admin.requisition.details');
+    Route::post('rdetails/store',[RequisitionController::class,'rdetailStore'])->name('admin.requisition.details.store');
+    Route::post('rdetails/action/{id}',[RequisitionController::class,'action'])->name('action');
     
     //for dealer
     Route::get('dealer-list',[DealerController::class,'dealerList'])->name('admin.dealer.list');
