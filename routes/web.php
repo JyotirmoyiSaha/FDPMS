@@ -8,17 +8,19 @@ use App\Http\Controllers\DealerController;
 use App\Http\Controllers\DealerstockController;
 use App\Http\Controllers\website\UserController;
 use App\Http\Controllers\RequisitionController;
+use App\Http\Controllers\RequisitiondetailsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
 
 
 //website 
 use App\Http\Controllers\website\ProductController as WebsiteProductController;
-use App\Http\Controllers\website\RequisitionController as WebsiteRequisitionController;
+use App\Http\Controllers\website\CartController;
 use App\Http\Controllers\website\StockController as WebsiteStockController;
 use App\Http\Controllers\website\HomeController as WebsiteHomeController;
 use App\Http\Controllers\website\UserprofileController;
 use App\Http\Controllers\website\AboutController;
+use App\Http\Controllers\website\CartConfirmController;
 
 
 
@@ -37,6 +39,13 @@ use App\Http\Controllers\website\AboutController;
     //   Route::get('/website', function (){ 
     //       return view('website.pages.home');
     //    });
+Route::group(['middleware'=>'web_auth'],function(){
+        //for cart
+Route::get('/requisitionlist',[CartController::class,'requisitionList'])->name('website.requisitionlist');
+Route::post('/add-to-cart',[CartController::class,'addToCart'])->name('website.addToCart');
+Route::get('/confirm',[CartConfirmController::class,'orderConfirm'])->name('website.oderconfirm');
+Route::get('cart/delete{cart_id}',[CartConfirmController::class,'cartDelete'])->name('website.cart.delete');
+    });
 
 Route::get('/registration',[UserController::class,'registration'])->name('user.registration');
 Route::post('/registration/store',[UserController::class,'registrationstore'])->name('user.registration.store');
@@ -51,13 +60,11 @@ Route::get('/product/category/list/{id}',[WebsiteProductController::class,'produ
 //stock
 Route::get('/stock/list',[WebsiteStockController::class,'stock'])->name('website.stock');
 //requisition
-Route::get('/requisition',[WebsiteRequisitionController::class,'webrequisition'])->name('website.requisition');
-Route::get('/requisition-create',[WebsiteRequisitionController::class,'webrequisitionCreate'])->name('website.requisition.create');
-Route::post('/requisition/store',[WebsiteRequisitionController::class,'webrequisitionstore'])->name('website.requisition.store');
+// Route::get('/requisition',[CartController::class,'webrequisition'])->name('website.requisition');
+// Route::get('/requisition-create',[WebrequisitionController::class,'webrequisitionCreate'])->name('website.requisition.create');
+// Route::post('/requisition/store',[WebsiteRequisitionController::class,'webrequisitionstore'])->name('website.requisition.store');
 
-//for cart
-Route::get('/cartlist',[WebsiteRequisitionController::class,'cartList'])->name('website.cart');
-Route::get('/cartconfirm/{id}',[WebsiteRequisitionController::class,'cartconfirm'])->name('website.cartconfirm');
+
 
 //about
 Route::get('/about',[AboutController::class,'about'])->name('website.about');
@@ -65,9 +72,7 @@ Route::get('/about',[AboutController::class,'about'])->name('website.about');
 //userprofile
 Route::get('/userprofile',[UserprofileController::class,'userprofile'])->name('website.userprofile');
 
-//request
-Route::get('/request/{request_id}',[WebsiteRequisitionController::class,'request'])->name('website.request');
-Route::post('/request/store/{request_id}',[WebsiteRequisitionController::class,'requeststore'])->name('website.request.store');
+
 
 
 
@@ -127,9 +132,10 @@ Route::group(['prefix'=>'admin'],function(){
     //Requisition Routes
     Route::get('rlist',[RequisitionController::class,'rList'])->name('admin.requisition.list');
     Route::post('rlist/store',[RequisitionController::class,'rListStore'])->name('admin.requisition.list.store');
-    Route::get('rdetails',[RequisitionController::class,'rDetails'])->name('admin.requisition.details');
-    Route::post('rdetails/store',[RequisitionController::class,'rdetailStore'])->name('admin.requisition.details.store');
-    Route::post('rdetails/action/{id}',[RequisitionController::class,'action'])->name('action');
+    Route::get('rdetails/{id}',[RequisitiondetailsController::class,'rDetails'])->name('admin.requisition.details');
+    // Route::post('rdetails/store',[RequisitiondetailsController::class,'rdetailStore'])->name('admin.requisition.details.store');
+    Route::post('rdetails/action/{id}',[RequisitiondetailsController::class,'action'])->name('action');
+  
     
     //for dealer
     Route::get('dealer-list',[DealerController::class,'dealerList'])->name('admin.dealer.list');

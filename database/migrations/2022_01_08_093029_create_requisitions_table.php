@@ -16,9 +16,8 @@ class CreateRequisitionsTable extends Migration
         Schema::create('requisitions', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
-            $table->string ('product_name');
-            $table->double('quantity');
-            $table->string('status')->default('panding');
+            $table->string ('date');
+            $table->string ('total_price');
             $table->timestamps();
         });
     } 

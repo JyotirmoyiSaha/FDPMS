@@ -9,6 +9,7 @@
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
+          @if (auth()->user()->role=='admin')
           <li class="nav-item active  ">
             <a class="nav-link" href="{{route('admin.home')}}">
               <i class="material-icons">dashboard</i>
@@ -45,22 +46,19 @@
               <p>Stock</p>
             </a>
           </li>
+          @endif
+          {{-- @if (auth()->user()->role=='dealer') --}}
           <li class="nav-item ">
-            <a class="nav-link" href="{{route('admin.dealerstock.list')}}">
+            <a class="nav-link" href="{{route('admin.dealerstock.list',)}}">
               <i class="material-icons">store</i>
               <p>Dealer Stock</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="{{route('admin.requisition.details')}}">
-              <i class="material-icons">add_shopping_cart</i>
-              <p>Requisition Details</p>
-            </a>
-          </li>
+          {{-- @endif --}}
           <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.requisition.list')}}">
               <i class="material-icons">add_shopping_cart</i>
-              <p>Requisition Total</p>
+              <p>Requisition</p>
             </a>
           </li>
           <li class="nav-item ">

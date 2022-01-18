@@ -67,6 +67,7 @@
 @endif
 {{-- end searching --}}
 
+
   <div class="heading">
     <h2>Product List</h2>
   </div>

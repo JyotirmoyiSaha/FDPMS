@@ -18,7 +18,7 @@ class DealerstockController extends Controller
         return view('admin.pages.dealer stock.dstock-create',compact('products'));
     }
     public function dealerstockStore(Request $request){
-        // dd($request->all());
+        dd($request->all());
         $checkIfExist=DealerStock::where('dealerstock_item',$request->dealerstock_item)->first();
   
         if($checkIfExist)

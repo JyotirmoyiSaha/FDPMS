@@ -46,9 +46,9 @@
       <form action="{{route('admin.dealerstock.store')}}" method="POST">
         @csrf
        <label for="stock">Stock Item</label>
-      <select id="stock" name="dealerstock_item">
+      <select id="stock" name="product_id">
         @foreach ($products as $item)
-        <option value="{{$item->product_name}}">{{$item->product_name}}</option>
+        <option value="{{$item->id}}">{{$item->product_name}}</option>
         @endforeach
       </select>
       <br>

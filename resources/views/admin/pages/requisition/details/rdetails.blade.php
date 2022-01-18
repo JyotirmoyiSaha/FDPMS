@@ -29,6 +29,13 @@
   }
   </style>
   <br>
+
+  @if(session()->has('success'))
+<p class="alert alert-success">
+    {{session()->get('success')}}
+</p>
+@endif
+
   <div class="heading">
     <h2>Requisition Detalis</h2>
   </div>
@@ -40,12 +47,11 @@
     <tr>
       <th>ID</th>
       <th>Requisition ID</th>
-      <th>Item ID</th>
-      <th>Item Name</th>
-      <th>Item Price</th>
-      <th>Item Quatity</th>
-      <th>Item Subtotal</th>
-      <th>Action</th>
+      <th>Product ID</th>
+      <th>Product Quantity</th>
+      <th>Product Price</th>
+      <th>Product Subtotal</th>
+      <th>Status</th>
   
     </tr>
     <tr>
@@ -53,19 +59,21 @@
       @foreach ($requisitiondetails as $key=>$requisitiondetail)
     <tr>
       <td>{{$key+1}}</td>
-      <td>{{$requisitiondetail->user_id}}</td>
-      <td>{{$requisitiondetail->item_id}}</td>
-      <td>{{$requisitiondetail->item_name}}</td>
-      <<td>{{$requisitiondetail->item_price}}</td>
-      <td>{{$requisitiondetail->item_quantity}}</td>
-      <td>{{$requisitiondetail->item_subtotal}}</td>
+      <td>{{$requisitiondetail->requisition_id}}</td>
+      <td>{{$requisitiondetail->product_id}}</td>
+      <td>{{$requisitiondetail->product_quantity}}</td>
+      <td>{{$requisitiondetail->product_price}}</td>
+      <td>{{$requisitiondetail->product_quantity * $requisitiondetail->product_price}} .BDT</td>
       <td>
-        <form action="{{route('action',$requisitiondetail->id)}}", method="POST">
-          @csrf
-          <button class="btn btn-info" type="submit" name="action" value="Approve">Aprove</button>
-        </form>
-        <a class="btn btn-danger" href="">Deny</a>
-      </td>
+        @if($requisitiondetail->status=='Pending')
+       <form action="{{route('action',$requisitiondetail->id)}}", method="POST">
+         @csrf
+         <button class="btn btn-info" type="submit" name="action" value="Approve">Aprove</button>
+       </form>
+       @else
+       <button type="button" class="btn btn-success">Confirmed</button>
+       @endif
+     </td> 
     </tr>    
     @endforeach
 </table>

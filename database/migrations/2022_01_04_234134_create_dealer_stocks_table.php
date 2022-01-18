@@ -15,7 +15,7 @@ class CreateDealerStocksTable extends Migration
     {
         Schema::create('dealer_stocks', function (Blueprint $table) {
             $table->id();
-            $table->string('dealerstock_item');
+            $table->string('product_id');
             $table->string('dealerstock_quantity');
             $table->timestamps();
         });

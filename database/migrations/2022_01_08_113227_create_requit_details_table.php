@@ -15,12 +15,11 @@ class CreateRequitDetailsTable extends Migration
     {
         Schema::create('requit_details', function (Blueprint $table) {
             $table->id();
-            $table->string('user_id');
-            $table->string('item_id');
-            $table->string('item_name');
-            $table->double('item_price');
-            $table->double('item_quantity');
-            $table->double('item_subtotal');
+            $table->integer('requisition_id');
+            $table->integer('product_id');
+            $table->double('product_quantity');
+            $table->double('product_price');
+            $table->double('subtotal');
             $table->string('status')->default('Pending');
             $table->timestamps();
         });
