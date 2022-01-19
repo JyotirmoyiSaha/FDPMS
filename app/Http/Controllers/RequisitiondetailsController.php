@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RequisitionDetails;
+use App\Models\Stock;
+use App\Models\DealerStock;
 use App\Models\Requisition;
 
 class RequisitiondetailsController extends Controller
@@ -17,8 +19,10 @@ class RequisitiondetailsController extends Controller
 
     public function action($id)
     {
-        // dd($id, request()->all());
-        $data = RequisitionDetails::where('id',$id)->first();
+        // dd(request()->action);
+        // dd($id);
+        $data = RequisitionDetails::find($id);
+    //    dd($data);
         $data->update([
             'status'=>request()->action,
         ]);
@@ -26,17 +30,36 @@ class RequisitiondetailsController extends Controller
         //stock calculation
 
         $adminstock=Stock::where('product_id',$data->product_id)->first();
-        $adminstock->update([
-            'stock_quantity'=>$adminstock->stock_quantity - $data->product_quantity,
-
-        ]);
+        // dd($adminstock);
+        if ($adminstock->stock_quantity>=$data->product_quantity) {
+            $adminstock->update([
+                'stock_quantity'=>$adminstock->stock_quantity - $data->product_quantity,
+    
+            ]);
+            $dealerStock=DealerStock::where('product_id',$data->product_id)->first();
+            if($dealerStock)
+            {
+                $dealerStock->update([
+                    'dealerstock_quantity'=>$dealerStock->dealerstock_quantity + $data->product_quantity,
+    
+            ]);
+            }else{
+                DealerStock::create([
+                    'dealerstock_quantity'=>$data->product_quantity,
+                    'product_id'=>$data->product_id
+    
+            ]);
+            }
+           
+            return redirect()->back();
+        }
+        else
+        {
+            return redirect()->back()->with('success','Product quantity not available.');
+        }
+       
 
         
-        $dealerStock=DealerStock::where('product_id',$data->product_id)->first();
-        $dealerStock->update([
-            'dealerstock_quantity'=>$dealerStock->dealerstock_quantity - $data->product_quantity,
-
-        ]);
-        return redirect()->back();
+        
     }
 }

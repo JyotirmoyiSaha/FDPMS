@@ -133,7 +133,6 @@ Route::group(['prefix'=>'admin'],function(){
     Route::get('rlist',[RequisitionController::class,'rList'])->name('admin.requisition.list');
     Route::post('rlist/store',[RequisitionController::class,'rListStore'])->name('admin.requisition.list.store');
     Route::get('rdetails/{id}',[RequisitiondetailsController::class,'rDetails'])->name('admin.requisition.details');
-    // Route::post('rdetails/store',[RequisitiondetailsController::class,'rdetailStore'])->name('admin.requisition.details.store');
     Route::post('rdetails/action/{id}',[RequisitiondetailsController::class,'action'])->name('action');
   
     

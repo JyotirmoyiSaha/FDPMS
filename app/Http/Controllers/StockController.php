@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class StockController extends Controller
 {
     public function stocklist(){
-        $stocks = Stock::all();
+        $stocks = Stock::with('product')->get();
         // dd($stocks);
         return view('admin.pages.stock.stock-list',compact('stocks'));
     }
@@ -26,7 +26,7 @@ class StockController extends Controller
         // dd($request->all());
         // table field name -- input field name
 
-        $checkIfExist=Stock::where('stock_item',$request->stock_item)->first();
+        $checkIfExist=Stock::where('product_id',$request->product_id)->first();
   
         if($checkIfExist)
         {
@@ -36,7 +36,7 @@ class StockController extends Controller
             ]);
         }else{
             Stock::create([
-                'stock_item'=>$request->stock_item,
+                'product_id'=>$request->product_id,
                 'stock_quantity'=>$request->stock_quantity,
             ]);
         }

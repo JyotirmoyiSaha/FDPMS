@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 class DealerstockController extends Controller
 {
     public function dealerstocklist(){
-        $dealerstocks = DealerStock::all();
+        $dealerstocks = DealerStock::with('product')->get();
+        // dd($dealerstocks);
         return view('admin.pages.dealer stock.dstock-list',compact('dealerstocks'));
     }
 
@@ -18,9 +19,10 @@ class DealerstockController extends Controller
         return view('admin.pages.dealer stock.dstock-create',compact('products'));
     }
     public function dealerstockStore(Request $request){
-        dd($request->all());
-        $checkIfExist=DealerStock::where('dealerstock_item',$request->dealerstock_item)->first();
+        // dd($request->all());
+        $checkIfExist=DealerStock::where('product_id',$request->product_id)->first();
   
+        // dd($request->all());
         if($checkIfExist)
         {
 
@@ -29,7 +31,7 @@ class DealerstockController extends Controller
             ]);
         }else{
             DealerStock::create([
-                'dealerstock_item'=>$request->dealerstock_item,
+                'product_id'=>$request->product_id,
                 'dealerstock_quantity'=>$request->dealerstock_quantity,
             ]);
         }

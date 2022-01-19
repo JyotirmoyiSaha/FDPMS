@@ -56,7 +56,7 @@
     @foreach ($stocks as $key=>$stock)
     <tr>
       <td>{{$key+1}}</td>
-      <td>{{$stock->product->stock_item}}</td>
+      <td>{{$stock->product->product_name}}</td>
       <td>{{$stock->stock_quantity}}</td>
       <td>
         
