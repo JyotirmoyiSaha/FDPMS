@@ -46,9 +46,12 @@
   <table id="customers">
     <thead>
     <tr>
-      <th>Distribution ID</th>
-      <th>Item Name</th>
-      <th>Item Quantity</th>
+      <th>ID</th>
+      <th>Requisition ID</th>
+      <th>Product ID</th>
+      <th>Product Quantity</th>
+      <th>Product Price</th>
+      <th>Subtotal</th>
       <th>Distribution Location</th>
     </tr>
     <thead>
@@ -56,9 +59,12 @@
         @foreach ($distributions as $key=>$distribution)
         <tr>
           <td>{{$key+1}}</td>
-          <td>{{$distribution->item_name}}</td>
+          <td>{{$distribution->requisition_id}}</td>
+          <td>{{$distribution->product_id}}</td>
+          <td>{{$distribution->product_quantity}}</td>
+          <td>{{$distribution->product_price}}</td>
+          <td>{{$distribution->subtotal}}</td>
           <td>{{$distribution->location}}</td>
-          <td>{{$distribution->quantity}}</td>
         </tr>    
         @endforeach
         

@@ -15,9 +15,12 @@ class CreateDistributionsTable extends Migration
     {
         Schema::create('distributions', function (Blueprint $table) {
             $table->id();
-            $table->string('item_name');
+            $table->string('requisition_id');
+            $table->string('product_id');
+            $table->string('product_quantity');
+            $table->string('product_price');
+            $table->string('subtotal');
             $table->string('location');
-            $table->string('quantity');
             $table->timestamps();
         });
     }
