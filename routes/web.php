@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductupdateController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\DistributionController;
 use App\Http\Controllers\RegisterController;
@@ -102,6 +103,8 @@ Route::group(['prefix'=>'admin'],function(){
     Route::get('product-create',[ProductController::class,'productCreate'])->name('admin.product.create');
     Route::get('product/view/{product_id}',[ProductController::class,'productDetails'])->name('admin.product.details');
     Route::get('product/delete/{product_id}',[ProductController::class,'productDelete'])->name('admin.product.delete');
+    Route::get('product/edit/{id}',[ProductupdateController::class,'productEdit'])->name('admin.product.edit');
+    Route::patch('product/update/{id}',[ProductupdateController::class,'productUpdate'])->name('admin.product.update');
     // database
     Route::post('/product/store',[ProductController::class,'productStore'])->name('admin.product.store');
     

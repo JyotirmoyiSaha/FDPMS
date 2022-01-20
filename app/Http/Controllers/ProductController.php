@@ -67,6 +67,8 @@ class ProductController extends Controller
    }
    //Product table database connection end
 
+
+
    //view details
    public function productDetails($product_id)
     {
@@ -101,7 +103,14 @@ class ProductController extends Controller
 
 
 
-   //Productcategory
+
+
+
+
+
+
+
+   //Productcategory start
 
    public function prodList(){
        $prodlist=ProductCategory::all();
@@ -137,10 +146,13 @@ return redirect()->route('admin.product_category.prolist')->with('success','Prod
  public function productCategoryDetails($product_id)
  {
 
-   $prodlist=Product::find($product_id);
+   $prodlist=ProductCategory::find($product_id);
  return view('admin.pages.products_category.category-details',compact('prodlist'));
  }
    //view end
+
+
+    
 //delete
    public function productCategoryDelete($product_id)
     {
