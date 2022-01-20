@@ -66,7 +66,7 @@
   {{-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> --}}
   <!-- End Google Tag Manager (noscript) -->
   @include('admin.fixed.sidebar')
-    <div class="main-panel">
+    <div class="main-panel" style="padding: 10px">
     @include('admin.fixed.header')
       <!-- Navbar -->
       

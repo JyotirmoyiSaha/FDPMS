@@ -9,8 +9,19 @@
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
+          @if (auth()->user())
+            <li class="nav-item active  ">
+              <a class="nav-link" href="">
+                <i class="material-icons">person</i>
+                <p>{{auth()->user()->name}}</p>
+              </a>
+            </li>      
+          @endif
+          
+
+
           @if (auth()->user()->role=='admin')
-          <li class="nav-item active  ">
+          <li class="nav-item  ">
             <a class="nav-link" href="{{route('admin.home')}}">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
@@ -68,9 +79,9 @@
             </a>
           </li>  
           <li class="nav-item ">
-            <a class="nav-link" href="./map.html">
+            <a class="nav-link" href="{{route('admin.report')}}">
               <i class="material-icons">payments</i>
-              <p>Collection</p>
+              <p>Report</p>
             </a>
           </li>
           <li class="nav-item ">

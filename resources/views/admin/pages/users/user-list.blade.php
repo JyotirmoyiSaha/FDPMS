@@ -92,7 +92,6 @@
         <td>{{$user->type}}</td>
         <td>
           <a class="btn btn-info" href="{{route('admin.user.details',$user->id)}}">View</a>
-          <a class="btn btn-Sucess" href="">Edit</a>
           <a class="btn btn-danger" href="{{route('admin.user.delete',$user->id)}}">Delete</a>
           
       </td>

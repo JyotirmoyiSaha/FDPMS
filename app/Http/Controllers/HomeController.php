@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Home;
 
 use Illuminate\Http\Request;
 
@@ -32,7 +33,7 @@ class HomeController extends Controller
     //view details
    public function userDetails($user_id)
    {
-     $users=User::find($user_id);
+     $users=Home::find($user_id);
        return view('admin.pages.users.user-details',compact('users'));
    }
      //view end

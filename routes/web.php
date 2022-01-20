@@ -10,6 +10,7 @@ use App\Http\Controllers\DealerstockController;
 use App\Http\Controllers\website\UserController;
 use App\Http\Controllers\RequisitionController;
 use App\Http\Controllers\RequisitiondetailsController;
+use App\Http\Controllers\ReportController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
 
@@ -19,6 +20,7 @@ use App\Http\Controllers\website\ProductController as WebsiteProductController;
 use App\Http\Controllers\website\CartController;
 use App\Http\Controllers\website\StockController as WebsiteStockController;
 use App\Http\Controllers\website\HomeController as WebsiteHomeController;
+use App\Http\Controllers\website\Requisition as WebsiteRequisitionController;
 use App\Http\Controllers\website\UserprofileController;
 use App\Http\Controllers\website\AboutController;
 use App\Http\Controllers\website\CartConfirmController;
@@ -72,6 +74,8 @@ Route::get('/about',[AboutController::class,'about'])->name('website.about');
 
 //userprofile
 Route::get('/userprofile',[UserprofileController::class,'userprofile'])->name('website.userprofile');
+Route::get('/myrequisition',[WebsiteRequisitionController::class,'myrequisition'])->name('website.requisition');
+
 
 
 
@@ -153,6 +157,10 @@ Route::group(['prefix'=>'admin'],function(){
     Route::get('distribution-list',[DistributionController::class,'distributionList'])->name('admin.distribution.list');
     Route::get('distribute',[DistributionController::class,'distributionCreate'])->name('admin.distribution.create');
     Route::post('/distribution/store',[DistributionController::class,'distributionStore'])->name('admin.distribution.store');
+    
+
+   //Report
+   Route::get('report',[ReportController::class,'report'])->name('admin.report');
 
 
 });
