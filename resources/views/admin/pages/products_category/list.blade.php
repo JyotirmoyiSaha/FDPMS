@@ -49,7 +49,7 @@
    </style>
 
 {{-- searching --}}
-{{-- <form action="{{route('admin.product_category.prolist')}}" method="GET">
+<form action="{{route('admin.product_category.prolist')}}" method="GET">
   <div class="row">
       <div class="col-md-4"></div>
       <div class="col-md-6">
@@ -62,10 +62,10 @@
   </form>
   @if($key)
   <h6>
-      Searching for: {{$key}}.found:{{$prodList->count()}}
+      Searching for: {{$key}}.found:{{$prodlist->count()}}
   </h6>
-@endif --}}
-{{-- end searching --}}
+@endif 
+{{--end searching  --}}
 
 
 

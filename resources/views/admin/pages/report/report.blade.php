@@ -67,25 +67,27 @@
     <table id="customers">
       <tr>
         <th>ID</th>
-        <th>id</th>
-        <th>Name</th>
-        
-    
+        <th>Requisition ID</th>
+        <th>Product Name</th>
+        <th>Product Quantity</th>
+        <th>Product Price</th>
+        <th>Subtotal</th>
       </tr>
- 
-      <tr>
-        <td>hello</td>
-        <td>
-            helloo
-        </td>
-
-        <td>hello</td>
-        
-       
-      </tr>
-   
-     
-    
+      <thead>
+      <tbody>
+          @foreach ($report as $key=>$reports)
+          <tr>
+            <td>{{$key+1}}</td>
+            <td>{{$reports->requisition_id}}</td>
+            <td>{{$reports->product->product_name}}</td>
+            <td>{{$reports->product_quantity}}</td>
+            <td>{{$reports->product_price}}</td>
+            <td>{{$reports->subtotal}}</td>
+  
+          </tr>    
+          @endforeach
+          
+        </tbody>
     </table>
         
     @endsection

@@ -17,10 +17,10 @@ class DistributionController extends Controller
     //   dd($distributions);
         return view('admin.pages.distributions.distribution-list',compact('distributions'));
     }
-    public function distributioncreate(){
-        $products = Product::all();
-         return view('admin.pages.distributions.distribution-create',compact('products'));
-    }
+    // public function distributioncreate(){
+    //     $products = Product::all();
+    //      return view('admin.pages.distributions.distribution-create',compact('products'));
+    // }
     public function distributionStore(Request $request)
     {
         // dd($request->all());
@@ -36,6 +36,6 @@ class DistributionController extends Controller
                 'location'=>$request->location,
             ]);
            
-           return redirect()->route('admin.distribution.list')->with('success',' Distribute successfully.');
+           return redirect()->back();
         }
 }

@@ -18,13 +18,13 @@ class HomeController extends Controller
         if(request()->search)
         {
             $key=request()->search;
-            $users = User::where('name','LIKE','%'.$key.'%')
+            $users = Home::where('name','LIKE','%'.$key.'%')
                 ->get();
                 // ->orWhere('type','LIKE','%'.$key.'%')
               
             return view('admin.pages.users.user-list',compact('users','key'));
         }
-        $users = User::all();
+        $users = Home::all();
         // dd($users);
         return view('admin.pages.users.user-list',compact('users','key'));
     }
@@ -41,7 +41,7 @@ class HomeController extends Controller
       //delete
       public function userDelete($user_id)
     {
-       User::find($user_id)->delete();
+       Home::find($user_id)->delete();
        return redirect()->back()->with('success','User Deleted.');
     }
    //delete end

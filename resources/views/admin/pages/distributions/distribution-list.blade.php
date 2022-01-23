@@ -52,7 +52,7 @@
       <th>Product Quantity</th>
       <th>Product Price</th>
       <th>Subtotal</th>
-      <th>Distribution Location</th>
+      {{-- <th>Distribution Location</th> --}}
     </tr>
     <thead>
     <tbody>
@@ -64,7 +64,7 @@
           <td>{{$distribution->product_quantity}}</td>
           <td>{{$distribution->product_price}}</td>
           <td>{{$distribution->subtotal}}</td>
-          <td>{{$distribution->location}}</td>
+          {{-- <td>{{$distribution->user->address}}</td> --}}
         </tr>    
         @endforeach
         

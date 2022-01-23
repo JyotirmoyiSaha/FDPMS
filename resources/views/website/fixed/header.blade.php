@@ -37,24 +37,12 @@
                     <a class="nav-link" href="{{route('website.requisitionlist')}}"> Requisitions</a>
                 </li>
                 @endif
-               
-                {{-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Requisitions
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                        <a class="dropdown-item" href="portfolio-1-col.html">Stock Iteam</a>
-                        <a class="dropdown-item" href="portfolio-2-col.html">Quatity</a>
-                    </div>
-                </li> --}}
+
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="{{route('website.contact')}}">Contact</a>
                 </li>
-                {{-- <li class="nav-item">
-                    <a class="btn" href="{{route('website.cartlist')}}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M4 6.414L.757 3.172l1.415-1.415L5.414 5h15.242a1 1 0 0 1 .958 1.287l-2.4 8a1 1 0 0 1-.958.713H6v2h11v2H5a1 1 0 0 1-1-1V6.414zM5.5 23a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm12 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/ ></svg></a>
-                </li> --}}
+               
                 @if(Auth::check())
                 <li class="nav-item">
                   <a class="nav-link" href="{{route('website.userprofile')}}">Profile</a>
@@ -194,11 +182,6 @@
             </div>
 
         </div>
-
-        {{-- <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button value="Login" class="btn btn-primary">Login</button>
-        </div> --}}
     </div>
 </div>
 </div>

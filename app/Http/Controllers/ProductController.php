@@ -113,9 +113,19 @@ class ProductController extends Controller
    //Productcategory start
 
    public function prodList(){
+    $key=null;
+    if(request()->search)
+    {
+        $key=request()->search;
+        $prodlist = ProductCategory::where('category_name','LIKE','%'.$key.'%')
+            ->get();
+        return view('admin.pages.products_category.list',compact('prodlist','key'));
+    }
        $prodlist=ProductCategory::all();
-       return view('admin.pages.products_category.list',compact('prodlist'));
+       return view('admin.pages.products_category.list',compact('prodlist','key'));
    }
+   
+
    public function prodcreate(){
        return view ('admin.pages.products_category.create');
    }
@@ -159,5 +169,6 @@ return redirect()->route('admin.product_category.prolist')->with('success','Prod
        Product::find($product_id)->delete();
        return redirect()->back()->with('success','Product_Category Deleted.');
     }
+//delete end
 
 }

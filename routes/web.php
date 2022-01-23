@@ -20,10 +20,11 @@ use App\Http\Controllers\website\ProductController as WebsiteProductController;
 use App\Http\Controllers\website\CartController;
 use App\Http\Controllers\website\StockController as WebsiteStockController;
 use App\Http\Controllers\website\HomeController as WebsiteHomeController;
-use App\Http\Controllers\website\Requisition as WebsiteRequisitionController;
+use App\Http\Controllers\website\RequisitionController as WebsiteRequisitionController;
 use App\Http\Controllers\website\UserprofileController;
 use App\Http\Controllers\website\AboutController;
 use App\Http\Controllers\website\CartConfirmController;
+use App\Http\Controllers\website\ContactController;
 
 
 
@@ -74,8 +75,12 @@ Route::get('/about',[AboutController::class,'about'])->name('website.about');
 
 //userprofile
 Route::get('/userprofile',[UserprofileController::class,'userprofile'])->name('website.userprofile');
-Route::get('/myrequisition',[WebsiteRequisitionController::class,'myrequisition'])->name('website.requisition');
+Route::get('/myrequisition/{requisition_id}',[WebsiteRequisitionController::class,'myrequisition'])->name('website.requisition');
+// Route::get('/myrequisition/view/{requisition_id}',[WebsiteRequisitionController::class,'viewrequisition'])->name('website.requisition.view');
 
+
+//contact
+Route::get('/contactus',[ContactController::class,'contact'])->name('website.contact');
 
 
 
@@ -113,8 +118,8 @@ Route::group(['prefix'=>'admin'],function(){
     Route::post('/product/store',[ProductController::class,'productStore'])->name('admin.product.store');
     
     //product category create Routes
-    Route::get('pro_c-list',[ProductController::class,'prodList'])->name('admin.product_category.prolist');
-    Route::get('pro_c-create',[ProductController::class,'prodCreate'])->name('admin.product_category.procreate');
+    Route::get('productcategory-list',[ProductController::class,'prodList'])->name('admin.product_category.prolist');
+    Route::get('product_category-create',[ProductController::class,'prodCreate'])->name('admin.product_category.procreate');
     Route::get('product-category/view/{product_id}',[ProductController::class,'productCategoryDetails'])->name('admin.product_category.details');
     Route::get('product/category/delete/{product_id}',[ProductController::class,'productCategoryDelete'])->name('admin.product_category.delete');
     // database
@@ -161,6 +166,7 @@ Route::group(['prefix'=>'admin'],function(){
 
    //Report
    Route::get('report',[ReportController::class,'report'])->name('admin.report');
+   Route::post('/report/store',[ReportController::class,'reportStore'])->name('admin.report.store');
 
 
 });

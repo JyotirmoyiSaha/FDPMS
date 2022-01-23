@@ -39,19 +39,22 @@
 
   <body>
   <div class="heading">
-    <h2>Requisition</h2>
+    <h2>Requisition view</h2>
   </div>
   
   <br>
   <table id="customers">
     <tr>
-      <th> ID</th>
-      <th>Product Name</th>
+      <th>Requisition ID</th>
+      <th>Product ID</th>
       <th>Product Quantity</th>
       <th>Product Price</th>
-      <th>Subtotal</th>
+      <th>Product Subtotal</th>
+      <th>Status</th>
     </tr>
-    
+    @foreach ( as $item)
+        
+    @endforeach
     <tr>
       <td> hello</td>
       <td> hello</td>

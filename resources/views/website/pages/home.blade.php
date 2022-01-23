@@ -3,6 +3,103 @@
 
 @section('content')
 
+{{-- services --}}
+<style>
+    .container {
+  max-width: 1320px;
+}
+section {
+  overflow: hidden;
+}
+
+.section-bg {
+  background: #f5f8fd;
+}
+
+.section-header h3 {
+  font-size: 36px;
+  color: #413e66;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+}
+
+.section-header p {
+  text-align: center;
+  margin: auto;
+  font-size: 15px;
+  padding-bottom: 60px;
+  color: #535074;
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  .section-header p {
+    width: 100%;
+  }
+}
+
+#services {
+  padding: 60px 0 40px 0;
+}
+
+#services .box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0 10px 40px 10px;
+  background: #fff;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+#services .box:hover {
+  transform: scale(1.1);
+}
+
+#services .icon {
+  margin: 0 auto 15px auto;
+  padding-top: 12px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+#services .icon .service-icon {
+  font-size: 36px;
+  line-height: 1;
+}
+
+#services .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+#services .title a {
+  color: #111;
+}
+
+#services .box:hover .title a {
+  color: #c59c35;
+}
+#services .box:hover .title a:hover {
+  text-decoration: none;
+}
+#services .description {
+  font-size: 14px;
+  line-height: 28px;
+  margin-bottom: 0;
+  text-align: left;
+}
+</style>
+{{-- services --}}
+
 
 <header class="slider-main">
     <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
@@ -46,185 +143,86 @@
 </header>
 
 
-<!-- About Section -->
-<div class="about-main">
-   <div class="row">
-      <div class="col-lg-6">
-         <h2>Welcome to N & LW Lawn Care</h2>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-         <h5>Our smart approach</h5>
-         <ul>
-            <li>Sed at tellus eu quam posuere mattis.</li>
-            <li>Phasellus quis erat et enim laoreet posuere ac porttitor ipsum.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            <li>Duis porttitor odio pellentesque mollis vulputate.</li>
-            <li>Quisque ac eros non ex hendrerit vehicula.</li>
-         </ul>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
-      </div>
-      <div class="col-lg-6">
-         <img class="img-fluid rounded" src="images/about-img.jpg" alt="" />
-      </div>
-   </div> 
-   <!-- /.row -->
-</div> 
- 
-<div class="services-bar">
-    <h1 class="my-4">Our Best Services </h1>
-    <!-- Services Section -->
-    <div class="row">
-       <div class="col-lg-4 mb-4">
-          <div class="card h-100">
-             <h4 class="card-header">Garden Fence</h4>
-             <div class="card-img">
-                <img class="img-fluid" src="images/services-img-01.jpg" alt="" />
-             </div>
-             <div class="card-body">
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-             </div>
-             <div class="card-footer">
-                <a href="#" class="btn btn-primary">Learn More</a>
-             </div>
-          </div>
-       </div>
-       <div class="col-lg-4 mb-4">
-          <div class="card h-100">
-             <h4 class="card-header">Garden Watering</h4>
-             <div class="card-img">
-                <img class="img-fluid" src="images/services-img-02.jpg" alt="" />
-             </div>
-             <div class="card-body">
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-             </div>
-             <div class="card-footer">
-                <a href="#" class="btn btn-primary">Learn More</a>
-             </div>
-          </div>
-       </div>
-       <div class="col-lg-4 mb-4">
-          <div class="card h-100">
-             <h4 class="card-header">Garden Supplies</h4>
-             <div class="card-img">
-                <img class="img-fluid" src="images/services-img-03.jpg" alt="" />
-             </div>
-             <div class="card-body">
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-             </div>
-             <div class="card-footer">
-                <a href="#" class="btn btn-primary">Learn More</a>
-             </div>
-          </div>
-       </div>
-    </div>
-    <!-- /.row -->
-</div>
 
-<!-- Portfolio Section -->
-<div class="portfolio-main">
-    <h2>Our Portfolio</h2>
-    <div class="row">
-       <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-             <div class="card-img">
-                <a href="#">
-                   <img class="card-img-top" src="images/portfolio-img-01.jpg" alt="" />
-                   <div class="overlay"><i class="fas fa-arrows-alt"></i></div>
-                </a>
-             </div>
-             <div class="card-body">
-                <h4 class="card-title">
-                   <a href="#">Lawn & garden care</a>
-                </h4>
-             </div>
+
+
+
+
+{{-- services --}}
+
+
+
+<section class="services section-bg" id="services">
+    <div class="container">
+      <header class="section-header">
+        <h3>Services</h3>
+  
+       <h4><p>What We’re Offering</p></h4> 
+      </header>
+  
+      <div class="row">
+         <div class="col-md-6 col-lg-4">
+            <div class="box">
+              <div class="icon" style="  background-image: url('images/service1.png')";>
+              </div>
+    
+              <h4 class="title"><a href="">Pesticide</a></h4>
+    
+              <p class="description">In general, a pesticide is a chemical (such as carbamate) or biological agent.</p>
+            </div>
           </div>
-       </div>
-       <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-             <div class="card-img">
-                <a href="#">
-                   <img class="card-img-top" src="images/portfolio-img-02.jpg" alt="" />
-                   <div class="overlay"><i class="fas fa-arrows-alt"></i></div>
-                </a>
-             </div>
-             <div class="card-body">
-                <h4 class="card-title">
-                   <a href="#">Lawn renovation</a>
-                </h4>
-             </div>
+
+
+         <div class="col-md-6 col-lg-4">
+            <div class="box">
+              <div class="icon" style=" background-image: url('images/service2.png')";>
+              </div>
+    
+              <h4 class="title"><a href="">Aqua</a></h4>
+    
+              <p class="description">We deliver innovation and service to help fish producers improve fish welfare.</p>
+            </div>
           </div>
-       </div>
-       <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-             <div class="card-img">
-                <a href="#">
-                   <img class="card-img-top" src="images/portfolio-img-03.jpg" alt="" />
-                   <div class="overlay"><i class="fas fa-arrows-alt"></i></div>
-                </a>
-             </div>
-             <div class="card-body">
-                <h4 class="card-title">
-                   <a href="#">Tree planting</a>
-                </h4>
-             </div>
+
+
+
+         <div class="col-md-6 col-lg-4">
+            <div class="box">
+              <div class="icon" style=" background-image: url('images/service3.jpg')";>
+              </div>
+    
+              <h4 class="title"><a href="">Seeds</a></h4>
+    
+              <p class="description">A seed is an embryonic plant enclosed in a protective outer covering.</p>
+            </div>
           </div>
-       </div>
-       <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-             <div class="card-img">
-                <a href="#">
-                   <img class="card-img-top" src="images/portfolio-img-04.jpg" alt="" />
-                   <div class="overlay"><i class="fas fa-arrows-alt"></i></div>
-                </a>
-             </div>
-             <div class="card-body">
-                <h4 class="card-title">
-                   <a href="#">Water Baganig</a>
-                </h4>
-             </div>
+
+
+
+         <div class="col-md-6 col-lg-4">
+            <div class="box">
+              <div class="icon" style=" background-image: url('images/service4.png')";>
+              </div>
+    
+              <h4 class="title"><a href="">Organic</a></h4>
+    
+              <p class="description">Organic fertilizer can improve the soil physical, chemical and biological properties. Organic fertilizer contributes to sustainable land management by improving these properties.</p>
+            </div>
           </div>
-       </div>
-       <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-             <div class="card-img">
-                <a href="#">
-                   <img class="card-img-top" src="images/portfolio-img-05.jpg" alt="" />
-                   <div class="overlay"><i class="fas fa-arrows-alt"></i></div>
-                </a>
-             </div>
-             <div class="card-body">
-                <h4 class="card-title">
-                   <a href="#">Growing plants</a>
-                </h4>
-             </div>
+
+         <div class="col-md-6 col-lg-4">
+            <div class="box">
+              <div class="icon" style=" background-image: url('images/service5.png')";>
+              </div>
+    
+              <h4 class="title"><a href=""></a>Nitrogen</h4>
+    
+              <p class="description">Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+            </div>
           </div>
-       </div>
-       <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-             <div class="card-img">
-                <a href="#">
-                   <img class="card-img-top" src="images/portfolio-img-01.jpg" alt="" />
-                   <div class="overlay"><i class="fas fa-arrows-alt"></i></div>
-                </a>
-             </div>
-             <div class="card-body">
-                <h4 class="card-title">
-                   <a href="#">Snow removal</a>
-                </h4>
-             </div>
-          </div>
-       </div>
     </div>
-    <!-- /.row -->
-</div>
-<hr>
-<!-- Get In Touch Now Section -->
-<div class="row mb-4">
-    <div class="col-md-8">
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
-    </div>
-    <div class="col-md-4">
-       <a class="btn btn-lg btn-secondary btn-block" href="#">Get In Touch Now</a>
-    </div>
-</div> 
+  </section>
+
+
 
 @endsection
