@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\website;
 
-use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
@@ -76,6 +77,7 @@ class UserController extends Controller
 
     public function logout()
     {
+        Session::flush();
         Auth::logout();
      return redirect()->back()->with('message','Logging out.');
     }

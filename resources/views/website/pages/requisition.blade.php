@@ -39,29 +39,31 @@
 
   <body>
   <div class="heading">
-    <h2>Requisition view</h2>
+    <h2>My Requisition</h2>
   </div>
   
   <br>
   <table id="customers">
     <tr>
-      <th>Requisition ID</th>
-      <th>Product ID</th>
+      <th>ID</th>
+      <th>Product Name</th>
       <th>Product Quantity</th>
       <th>Product Price</th>
       <th>Product Subtotal</th>
       <th>Status</th>
     </tr>
-    @foreach ( as $item)
-        
-    @endforeach
-    <tr>
-      <td> hello</td>
-      <td> hello</td>
-      <td> hello</td>
-      <td> hello</td>
-      <td> hello</td>
-    </tr>  
+    @dd($requisitions)
+    @foreach ($requisitions as $key=>$requisition)
+
+        <tr>
+          <td>{{$key+1}}</td>
+          <td>{{$requisition->details->product->product_name}}</td>
+          <td>{{$requisition->product_quantity}}</td>
+          <td>{{$requisition->product_price}}</td>
+          <td>{{$requisition->subtotal}}</td>
+          <td>{{$requisition->status}}</td>
+        </tr>    
+        @endforeach 
   </table>
   <body>
 

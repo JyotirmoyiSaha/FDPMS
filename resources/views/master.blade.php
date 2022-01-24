@@ -40,6 +40,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="{{url('/')}}/css/dashboard.min.css?v=2.1.0" rel="stylesheet" />
+  <link rel="stylesheet" href="{{url('css/print.css')}}">
   <!-- Google Tag Manager -->
   {{-- <script>
     (function(w, d, s, l, i) {

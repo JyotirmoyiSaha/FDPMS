@@ -58,7 +58,6 @@
   <table id="customers">
     <tr>
       <th>ID</th>
-      <th>User ID</th>
       <th>User Name</th>
       <th>Date</th>
       <th>Total Amount</th>
@@ -68,7 +67,6 @@
     @foreach ($requisitionlists as $key=> $requisitionlist)
     <tr>
       <th>{{$key+1}}</th>
-      <td>{{$requisitionlist->user->id}}</td>
       <td>{{$requisitionlist->user->name}}</td>
       <td>{{$requisitionlist->date}}</td>
       <td>{{$requisitionlist->total_price}}</td>

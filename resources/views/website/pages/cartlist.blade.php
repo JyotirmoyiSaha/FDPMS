@@ -179,6 +179,7 @@
     </tr>
     @if(isset($carts))
     @if(!empty($carts))
+    {{-- @dd($carts) --}}
     @foreach ($carts as $key=>$cart)
     <tr>
       <td> {{$key+1}} </td>

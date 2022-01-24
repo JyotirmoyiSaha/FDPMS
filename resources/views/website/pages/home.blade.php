@@ -110,14 +110,14 @@ section {
         </ol>
         <div class="carousel-inner" role="listbox">
            <!-- Slide One - Set the background image for this slide in the line below -->
-           <div class="carousel-item active" style="background-image: url('images/slider-01.jpg')">
+           <div class="carousel-item active" style="background-image: url('images/1.jpg')">
               <div class="carousel-caption d-none d-md-block">
                  <h3>Welcome to FDPMS</h3>
                  <p>Adding Green to your Life</p>
               </div>
            </div>
            <!-- Slide Two - Set the background image for this slide in the line below -->
-           <div class="carousel-item" style="background-image: url('images/slider-02.jpg')">
+           <div class="carousel-item" style="background-image: url('images/3.jpg')">
               <div class="carousel-caption d-none d-md-block">
                 <h3>Welcome to FDPMS</h3>
                 <p>Agriculture that works for the future</p>

@@ -19,4 +19,8 @@ class RequisitionDetails extends Model
         return $this->belongsTo(Product::class);
 
     }
+
+    public function rdetails(){
+        return $this->hasMany(Requisition::class);
+    }
 }

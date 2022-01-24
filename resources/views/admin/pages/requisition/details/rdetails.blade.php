@@ -52,7 +52,7 @@
     <tr>
       <th>ID</th>
       <th>Requisition ID</th>
-      <th>Product ID</th>
+      <th>Product Name</th>
       <th>Product Quantity</th>
       <th>Product Price</th>
       <th>Product Subtotal</th>
@@ -65,7 +65,7 @@
     <tr>
       <td>{{$key+1}}</td>
       <td>{{$requisitiondetail->requisition_id}}</td>
-      <td>{{$requisitiondetail->product_id}}</td>
+      <td>{{$requisitiondetail->product->product_name}}</td>
       <td>{{$requisitiondetail->product_quantity}}</td>
       <td>{{$requisitiondetail->product_price}}</td>
       <td>{{$requisitiondetail->product_quantity * $requisitiondetail->product_price}} .BDT</td>
