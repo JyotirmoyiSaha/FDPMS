@@ -25,7 +25,7 @@ use App\Http\Controllers\website\UserprofileController;
 use App\Http\Controllers\website\AboutController;
 use App\Http\Controllers\website\CartConfirmController;
 use App\Http\Controllers\website\ContactController;
-
+use App\Http\Controllers\website\WebrequisitiondetailsController;
 
 
 /*
@@ -76,7 +76,7 @@ Route::get('/about',[AboutController::class,'about'])->name('website.about');
 //userprofile
 Route::get('/userprofile',[UserprofileController::class,'userprofile'])->name('website.userprofile');
 Route::get('/myrequisition',[WebsiteRequisitionController::class,'myrequisition'])->name('website.requisition');
-// Route::get('/myrequisition/view/{requisition_id}',[WebsiteRequisitionController::class,'viewrequisition'])->name('website.requisition.view');
+Route::get('/myrequisitiondetails/view/{id}',[WebrequisitiondetailsController::class,'viewrequisitiondetails'])->name('website.requisitiondetails.view');
 
 
 //contact

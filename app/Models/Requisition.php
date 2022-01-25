@@ -14,7 +14,11 @@ class Requisition extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function details(){
-        return $this->hasMany(RequisitionDetails::class);
+    // public function details(){
+    //     return $this->hasMany(RequisitionDetails::class);
+    // }
+
+    public function requisition(){
+        return $this ->belongsTo(Requisition::class);
     }
 }

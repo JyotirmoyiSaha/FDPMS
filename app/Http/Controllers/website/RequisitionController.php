@@ -14,10 +14,12 @@ class RequisitionController extends Controller
    public function myrequisition(){
 
       $categories = ProductCategory::all();
-      $requisitions = Requisition::with('details')->where('user_id',auth()->user()->id)->get();
+      $requisitions = Requisition::where('user_id',auth()->user()->id)->get();
       // dd($requisitions);
       return view('website.pages.requisition',compact('requisitions','categories'));
    }
+
+  
    // public function myrequisition($requisition_id){
    //    $categories = ProductCategory::all();
 
