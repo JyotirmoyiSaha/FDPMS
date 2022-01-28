@@ -69,16 +69,10 @@
       <td>{{$requisitiondetailview->product_quantity}}</td>
       <td>{{$requisitiondetailview->product_price}}</td>
       <td>{{$requisitiondetailview->product_quantity * $requisitiondetailview->product_price}} .BDT</td>
-      {{-- <td>
-        @if($requisitiondetailview-->status=='Pending')
-       <form action="{{route('action',$requisitiondetailview->id)}}", method="POST">
-         @csrf
-         <button class="btn btn-info" type="submit" name="action" value="Approve">Aprove</button>
-       </form>
-       @else
-       <button type="button" class="btn btn-success">Confirmed</button>
-       @endif
-     </td>  --}}
+       <td>
+        {{$requisitiondetailview->status}}
+      
+     </td> 
     </tr>    
     @endforeach
 </table>

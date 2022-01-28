@@ -51,7 +51,7 @@
       <th>Action</th>
 
     </tr>
-    @foreach ($requisitions as $key=> $requisitionall)
+    @foreach ($requisitions as $key=>$requisitionall)
     <tr>
       <th>{{$key+1}}</th>
       <td>{{$requisitionall->date}}</td>

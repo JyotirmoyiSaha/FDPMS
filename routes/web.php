@@ -48,7 +48,10 @@ Route::group(['middleware'=>'web_auth'],function(){
 Route::get('/requisitionlist',[CartController::class,'requisitionList'])->name('website.requisitionlist');
 Route::post('/add-to-cart',[CartController::class,'addToCart'])->name('website.addToCart');
 Route::get('/confirm',[CartConfirmController::class,'orderConfirm'])->name('website.oderconfirm');
-Route::get('cart/delete{cart_id}',[CartConfirmController::class,'cartDelete'])->name('website.cart.delete');
+Route::get('/cart/product/delete/{id}',[CartController::class,'cartDelete'])->name('cart.delete');
+ //DealerStock
+ Route::get('dealer/stock-list',[DealerstockController::class,'dealerstockList'])->name('admin.dealerstock.list');
+ Route::get('dealer/stock-create',[DealerstockController::class,'dealerstockCreate'])->name('admin.dealerstock.create');
     });
 
 Route::get('/registration',[UserController::class,'registration'])->name('user.registration');
@@ -131,9 +134,7 @@ Route::group(['prefix'=>'admin'],function(){
     Route::get('stock-create',[StockController::class,'stockCreate'])->name('admin.stock.create');
     Route::get('stock/delete/{stock_id}',[StockController::class,'stockDelete'])->name('admin.stock.delete');
 
-    //DealerStock
-    Route::get('dealer/stock-list',[DealerstockController::class,'dealerstockList'])->name('admin.dealerstock.list');
-    Route::get('dealer/stock-create',[DealerstockController::class,'dealerstockCreate'])->name('admin.dealerstock.create');
+   
     // database
     Route::post('/dealerstock/store',[DealerstockController::class,'dealerstockStore'])->name('admin.dealerstock.store');
     Route::post('/stock/store',[StockController::class,'stockStore'])->name('admin.stock.store');

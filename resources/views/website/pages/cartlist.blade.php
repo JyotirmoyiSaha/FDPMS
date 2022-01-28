@@ -187,6 +187,9 @@
       <td>{{$cart['quantity']}}</td>
       <td>{{$cart['product_price']}}</td>
       <td>{{$cart['quantity']*$cart['product_price']}}</td>
+      <td> 
+        <a class="btn btn-danger" href="{{route('cart.delete',$key)}}">Deny</a>
+      </td>
       @php
           $total=$total+($cart['quantity']*$cart['product_price']);
       @endphp
@@ -204,7 +207,7 @@
       <td>{{$total}}</td>
       {{-- <td>
         {{-- @dd($carts) --}}
-        {{-- <a class="btn btn-danger" href="{{route('website.cart.delete',$cart->id)}}">Deny</a>
+        {{-- <a class="btn btn-danger" href="">Deny</a>
       </td> --}}
     </tr>
     @endif

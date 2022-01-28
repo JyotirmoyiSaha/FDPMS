@@ -1,4 +1,4 @@
-@extends('master')
+@extends('website.master')
 
 @section('content')
 <style>

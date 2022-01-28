@@ -57,15 +57,6 @@
               <p>Stock</p>
             </a>
           </li>
-          @endif
-          {{-- @if (auth()->user()->role=='dealer') --}}
-          <li class="nav-item ">
-            <a class="nav-link" href="{{route('admin.dealerstock.list',)}}">
-              <i class="material-icons">store</i>
-              <p>Dealer Stock</p>
-            </a>
-          </li>
-          {{-- @endif --}}
           <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.requisition.list')}}">
               <i class="material-icons">add_shopping_cart</i>
@@ -90,6 +81,7 @@
               <p>Logout</p>
             </a>
           </li>
+          @endif
         </ul>
       </div>
     </div>

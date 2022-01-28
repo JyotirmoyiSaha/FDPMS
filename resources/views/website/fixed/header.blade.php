@@ -1,7 +1,7 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light top-nav fixed-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">
-            <img src="images/logo_06.png" alt="logo" />
+            <img src="images/logo8.png" style="height:80px;" alt="logo" />
         </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
             data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -101,35 +101,35 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="exampleFormControlFile1">Image</label>
-                        <input type="file" input name="user_image" class="form-control-file"
+                        <input required type="file"  input name="user_image" class="form-control-file"
                             id="exampleFormControlFile1">
                     </div>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="">Enter User Name:</label>
-                        <input name="user_name" type="text" class="form-control" placeholder="Enter user name">
+                        <input required name="user_name" type="text" class="form-control" placeholder="Enter user name">
                     </div>
                     <div class="form-group">
                         <label for="">Enter User Email:</label>
-                        <input name="user_email" type="email" class="form-control" placeholder="Enter user email">
+                        <input required name="user_email" type="email" class="form-control" placeholder="Enter user email">
                     </div>
                     <div class="form-group">
                         <label for="">Enter User Password:</label>
-                        <input name="user_password" type="password" class="form-control"
+                        <input  required name="user_password" type="password" class="form-control"
                             placeholder="Enter user password">
                     </div>
                     <div class="form-group">
                         <label for="">Enter User Mobile:</label>
-                        <input name="user_mobile" type="text" class="form-control" placeholder="Enter user mobile">
+                        <input required name="user_mobile" type="text" class="form-control" placeholder="Enter user mobile">
                     </div>
                     <div class="form-group">
                         <label for="">Enter User Address:</label>
-                        <input name="user_address" type="text" class="form-control" placeholder="Enter user address">
+                        <input required name="user_address" type="text" class="form-control" placeholder="Enter user address">
                     </div>
                     <div class="form-group">
                         <label for="">User Type</label>
-                        <input name="type" type="text" class="form-control" placeholder="Enter user type">
+                        <input required name="type" type="text" class="form-control" placeholder="Enter user type">
                     </div>
                 </div>
                 <div class="modal-footer">

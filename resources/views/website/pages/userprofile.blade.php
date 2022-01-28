@@ -39,12 +39,8 @@
 
                
           <div class="panel panel-default">
-            <div class="panel-body">My Profile </i></div>
             <div class="panel-body"><a href="{{route('website.requisition')}}">My Requisition</a></div>
-            <div class="panel-body"><a href="">Report View</a></div>
-            <div class="panel-body"><a href="">Payment</a></div>
-            <div class="panel-body"><a href="">My Review</a></div>
-            <div class="panel-body"><a href="">Help</a></div>
+            <div class="panel-body"><a href="{{route('admin.dealerstock.list')}}">My Stock</a></div>
           </div>
           
           

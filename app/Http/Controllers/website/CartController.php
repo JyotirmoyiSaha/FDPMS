@@ -53,11 +53,14 @@ class CartController extends Controller
    }
 
    //deny
-//   public function cartDelete($cart_id)
-//   {
-//     Requisitiondetails::find($cart_id)->delete();
-//      return redirect()->back()->with('success','Requisition Deleted.');
-//   }
+   public function cartDelete($id){
+      // dd($id);
+      $cart = session()->get('cart');
+      // dd($cart);
+      unset($cart[$id]);
+      session()->put('cart',$cart);
+     return redirect()->back();
+  }
   //deny end
 
 

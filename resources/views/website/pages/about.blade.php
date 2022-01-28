@@ -92,11 +92,6 @@
             <p class="text">
                 Fertilizer, a natural or artificial material holding the chemical essentials that help the growth and effectiveness of shops. Fertilizers enhance the natural fertility of the soil or supplant the chemical essentials taken from the soil by former crops. 
             </p>
-            <div class="skills">
-                <span>Web Design</span>
-                <span>Photoshop & Illustrator</span>
-                <span>Coding</span>
-            </div>
         </div>
     </div>
 </body>

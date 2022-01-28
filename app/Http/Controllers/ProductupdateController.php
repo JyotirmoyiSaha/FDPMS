@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\ProductCategory;
+use App\Models\Product;
 
 use Illuminate\Http\Request;
+use App\Models\ProductCategory;
 
 class ProductupdateController extends Controller
 {
