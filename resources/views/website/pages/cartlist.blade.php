@@ -126,12 +126,6 @@
 
     <h2>Requisit Product</h2>
   
-  <div>
-      @if(session()->has ('success'))
-    <p class="alert alert-success">
-      {{session()->get ('success')}}
-    </p>
-    @endif
     <form action="{{route('website.addToCart')}}" method="POST">
    
         @csrf

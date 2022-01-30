@@ -27,6 +27,7 @@ class RequisitiondetailsController extends Controller
             'status'=>request()->action,
         ]);
 
+
         //stock calculation
 
         $adminstock=Stock::where('product_id',$data->product_id)->first();
@@ -36,7 +37,9 @@ class RequisitiondetailsController extends Controller
                 'stock_quantity'=>$adminstock->stock_quantity - $data->product_quantity,
     
             ]);
-            $dealerStock=DealerStock::where('product_id',$data->product_id)->first();
+
+            $requisition=Requisition::find($data->requisition_id);
+            $dealerStock=DealerStock::where('product_id',$data->product_id)->where('user_id',$requisition->user_id)->first();
             if($dealerStock)
             {
                 $dealerStock->update([
@@ -46,7 +49,8 @@ class RequisitiondetailsController extends Controller
             }else{
                 DealerStock::create([
                     'dealerstock_quantity'=>$data->product_quantity,
-                    'product_id'=>$data->product_id
+                    'product_id'=>$data->product_id,
+                    'user_id'=>$requisition->user_id
     
             ]);
             }

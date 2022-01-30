@@ -47,7 +47,7 @@ try{
 
     DB::commit();
 
-    return redirect()->back();
+    return redirect()->back()->with('success','Product carted successfully.');
 
 }
 catch(Throwable $throw){

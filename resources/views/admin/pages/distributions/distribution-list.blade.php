@@ -60,7 +60,7 @@
         <tr>
           <td>{{$key+1}}</td>
           <td>{{$distribution->requisition_id}}</td>
-          <td>{{$distribution->product_id}}</td>
+          <td>{{$distribution->product->product_name}}</td>
           <td>{{$distribution->product_quantity}}</td>
           <td>{{$distribution->product_price}}</td>
           <td>{{$distribution->subtotal}}</td>

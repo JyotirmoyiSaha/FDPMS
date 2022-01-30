@@ -30,15 +30,15 @@ class UserController extends Controller
             $file->storeAs('/uploads',$filename);
             // dd($filename);
         }
-        $request->validate([
-           'user_name'=>'require',
-           'user_email'=>'require',
-        //    |unique:users',
-           'user_password'=>'require',
-           'user_mobile'=>'require',
-           'user_address'=>'require',
+        // $request->validate([
+        //    'user_name'=>'require',
+        //    'user_email'=>'require',
+        // //    |unique:users',
+        //    'user_password'=>'require',
+        //    'user_mobile'=>'require',
+        //    'user_address'=>'require',
           
-        ]);
+        // ]);
         //    dd($request->all());
         User::create([
            'image'=>$filename,

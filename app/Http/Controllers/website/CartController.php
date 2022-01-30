@@ -59,7 +59,7 @@ class CartController extends Controller
       // dd($cart);
       unset($cart[$id]);
       session()->put('cart',$cart);
-     return redirect()->back();
+     return redirect()->back()->with('error','carted product havebeen deleted');
   }
   //deny end
 
