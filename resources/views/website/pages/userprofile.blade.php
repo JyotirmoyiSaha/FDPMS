@@ -47,17 +47,13 @@
      
         </div><!--/col-3-->
     	<div class="col-sm-9">
-            <ul class="nav nav-tabs">
-                <a href="" class="btn btn-inf"> <li class="active">Edit</li></a>
-               
-              </ul>
-
               
           <div class="tab-content">
             <div class="tab-pane active" id="home">
                 <hr>
-                  <form class="form"  action="##" method="post" id="registrationForm">
-                   
+                  <form class="form"  action="{{route('website.userprofile.update',$profile->id)}}" method="post" id="registrationForm">
+                   @csrf
+                   @method('patch')
                       <div class="form-group">
                           
                           <div class="col-xs-6">
@@ -98,7 +94,7 @@
                           
                           <div class="col-xs-6">
                               <label for="email"><h4>Location</h4></label>
-                              <input type="text" class="form-control" id="location" value={{$profile->address}} title="enter a location">
+                              <input type="text" class="form-control" name="address" id="location" value={{$profile->address}} title="enter a location">
                           </div>
                       </div>
                       

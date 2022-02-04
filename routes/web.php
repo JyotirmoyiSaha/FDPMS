@@ -78,6 +78,7 @@ Route::get('/about',[AboutController::class,'about'])->name('website.about');
 
 //userprofile
 Route::get('/userprofile',[UserprofileController::class,'userprofile'])->name('website.userprofile');
+Route::patch('/userprofile//update/{id}',[UserprofileController::class,'userprofileupdate'])->name('website.userprofile.update');
 Route::get('/myrequisition',[WebsiteRequisitionController::class,'myrequisition'])->name('website.requisition');
 Route::get('/myrequisitiondetails/view/{id}',[WebrequisitiondetailsController::class,'viewrequisitiondetails'])->name('website.requisitiondetails.view');
 

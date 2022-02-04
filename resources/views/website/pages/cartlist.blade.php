@@ -124,12 +124,12 @@
 
   <body>
 
-    <h2>Requisit Product</h2>
+    <h2>Requisite Product</h2>
   
     <form action="{{route('website.addToCart')}}" method="POST">
    
         @csrf
-       <label for="product">product Name</label>
+       <label for="product">Product Name</label>
         <select id="product" name="product_id">
           @foreach ($products as $item)
           <option value="{{$item->id}}">{{$item->product_name}}</option>
@@ -178,9 +178,9 @@
     <tr>
       <td> {{$key+1}} </td>
       <td>{{$cart['product_name']}}</td>
-      <td>{{$cart['quantity']}}</td>
-      <td>{{$cart['product_price']}}</td>
-      <td>{{$cart['quantity']*$cart['product_price']}}</td>
+      <td>{{$cart['quantity']}}  KG</td>
+      <td>{{$cart['product_price']}}  .BDT</td>
+      <td>{{$cart['quantity']*$cart['product_price']}}  .BDT</td>
       <td> 
         <a class="btn btn-danger" href="{{route('cart.delete',$key)}}">Deny</a>
       </td>

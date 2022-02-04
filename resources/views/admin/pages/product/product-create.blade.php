@@ -94,8 +94,8 @@
         <img width="100px" src="{{url('/uploads/'.$product->product_image)}}" alt="">
       </td>
       <td>{{$product->product_name}}</td>
-      <td>{{$product->product_price}}</td>
-      <td>{{$product->dealer_price}}</td>
+      <td>{{$product->product_price}}.BDT</td>
+      <td>{{$product->dealer_price}} .BDT</td>
       <td>{{$product->product_details}}</td>
       <td>{{$product->product_category->category_name}}</td>
       <td>

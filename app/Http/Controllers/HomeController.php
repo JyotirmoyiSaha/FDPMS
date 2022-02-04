@@ -2,15 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use Carbon\Carbon;
 use App\Models\Home;
 
+use App\Models\User;
+use App\Models\Requisition;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function home(){
-        return view('admin.pages.home');
+        // $date=Carbon::now();
+        $count=Requisition::whereDate('created_at', Carbon::today())->count();
+        //  dd($count);
+        // dd($date);
+        return view('admin.pages.home',compact('count'));
     }
 
     public function userList(){

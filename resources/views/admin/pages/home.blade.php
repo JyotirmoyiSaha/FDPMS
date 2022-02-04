@@ -234,25 +234,7 @@ body {
               </div>
           </div>
           <!-- flex-item -->
-           <!-- flex-item -->
-           <div class="flex-item">
-            <div class="flex-item-inner">
-                <!-- card -->
-                  <a href="#">
-                    <div class="card-front bg-blue">
-                          <i class="fa fa-bar-chart fa-3x tile-icon icon-white"></i>
-                          <p class="detail">Dealer Stock</p>
-                      </div>
-                      <div class="card-back bg-blue">
-                          <p class="title">Stock List</p>
-                          <p class="desc">View stock informaion</p>
-                          <a href="{{route('admin.dealerstock.list')}}" class="link">View <i class="fa fa-chevron-circle-right"></i></a>
-                      </div>
-                  </a>
-                  <!-- /card -->
-              </div>
-          </div>
-          <!-- flex-item -->
+          
 
                      <!-- flex-item -->
           <div class="flex-item">
@@ -264,7 +246,7 @@ body {
                           <p class="detail">Requisition</p>
                       </div>
                       <div class="card-back bg-blue">
-                          <p class="title"> Requisition Deails </p>
+                          <p class="title"> Requisition Deails: {{$count}} </p>
                           <p class="desc">View requisition request and details information </p>
                           <a href="{{route('admin.requisition.list')}}" class="link">View <i class="fa fa-chevron-circle-right"></i></a>
                       </div>
@@ -273,27 +255,6 @@ body {
               </div>
           </div>
           <!-- flex-item -->
-
-                    <!-- flex-item -->
-          <div class="flex-item">
-            <div class="flex-item-inner">
-                <!-- card -->
-                <a href="#">
-                      <div class="card-front bg-blue">
-                          <i class="fa fa-cart-arrow-down fa fa-sun-o fa-3x tile-icon icon-white"></i>
-                          <p class="detail">Distriubtion</p>
-                      </div>
-                      <div class="card-back bg-blue">
-                          <p class="title">Distribute Info</p>
-                          <p class="desc">View distribute details<p>
-                        <a href="{{route('admin.distribution.list')}}" class="link">View <i class="fa fa-chevron-circle-right"></i></a>
-                      </div>
-                  </a>
-                  <!-- /card -->
-              </div>
-          </div>
-          <!-- /flex-item -->
-          
       </div>
       <!-- /flex-container -->
   </div>

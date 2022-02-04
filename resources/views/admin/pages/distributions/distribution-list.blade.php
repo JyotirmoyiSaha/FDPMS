@@ -61,9 +61,9 @@
           <td>{{$key+1}}</td>
           <td>{{$distribution->requisition_id}}</td>
           <td>{{$distribution->product->product_name}}</td>
-          <td>{{$distribution->product_quantity}}</td>
-          <td>{{$distribution->product_price}}</td>
-          <td>{{$distribution->subtotal}}</td>
+          <td>{{$distribution->product_quantity}}  KG</td>
+          <td>{{$distribution->product_price}} .BDT</td>
+          <td>{{$distribution->subtotal}} .BDT</td>
           {{-- <td>{{$distribution->user->address}}</td> --}}
         </tr>    
         @endforeach

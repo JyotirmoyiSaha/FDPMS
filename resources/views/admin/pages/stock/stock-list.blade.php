@@ -57,7 +57,7 @@
     <tr>
       <td>{{$key+1}}</td>
       <td>{{$stock->product->product_name}}</td>
-      <td>{{$stock->stock_quantity}}</td>
+      <td>{{$stock->stock_quantity}}  KG</td>
       <td>
         
         <a class="btn btn-danger" href="{{route('admin.stock.delete',$stock->id)}}">Delete</a>

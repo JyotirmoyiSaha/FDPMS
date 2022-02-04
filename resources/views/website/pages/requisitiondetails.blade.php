@@ -66,8 +66,8 @@
       <td>{{$key+1}}</td>
       <td>{{$requisitiondetailview->requisition_id}}</td>
       <td>{{$requisitiondetailview->product->product_name}}</td>
-      <td>{{$requisitiondetailview->product_quantity}}</td>
-      <td>{{$requisitiondetailview->product_price}}</td>
+      <td>{{$requisitiondetailview->product_quantity}} KG</td>
+      <td>{{$requisitiondetailview->product_price}} .BDT</td>
       <td>{{$requisitiondetailview->product_quantity * $requisitiondetailview->product_price}} .BDT</td>
        <td>
         {{$requisitiondetailview->status}}

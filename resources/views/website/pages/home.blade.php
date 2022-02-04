@@ -197,29 +197,6 @@ section {
             </div>
           </div>
 
-
-
-         <div class="col-md-6 col-lg-4">
-            <div class="box">
-              <div class="icon" style=" background-image: url('images/service4.png')";>
-              </div>
-    
-              <h4 class="title"><a href="">Organic</a></h4>
-    
-              <p class="description">Organic fertilizer can improve the soil physical, chemical and biological properties. Organic fertilizer contributes to sustainable land management by improving these properties.</p>
-            </div>
-          </div>
-
-         <div class="col-md-6 col-lg-4">
-            <div class="box">
-              <div class="icon" style=" background-image: url('images/service5.png')";>
-              </div>
-    
-              <h4 class="title"><a href=""></a>Nitrogen</h4>
-    
-              <p class="description">Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
-            </div>
-          </div>
     </div>
   </section>
 

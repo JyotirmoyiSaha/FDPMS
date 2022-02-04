@@ -20,4 +20,19 @@ class UserprofileController extends Controller
         // dd($requsition);
         return view('website.pages.userprofile',compact('categories','profile'));
     }
+
+    public function userprofileupdate(Request $request,$id)
+    {
+        // dd($request->all());
+        $profile=User::find($id);
+        $profile->update([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'mobile'=>$request->mobile,
+            'address'=>$request->address,
+           
+
+        ]);
+        return redirect()->back()->with('msg','Profile Updated');
+    }
 }

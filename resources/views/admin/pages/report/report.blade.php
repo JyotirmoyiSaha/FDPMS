@@ -43,9 +43,9 @@
                 <td>{{$key+1}}</td>
                 <td>{{$reports->requisition_id}}</td>
                 <td>{{$reports->product->product_name}}</td>
-                <td>{{$reports->product_quantity}}</td>
-                <td>{{$reports->product_price}}</td>
-                <td>{{$reports->subtotal}}</td>
+                <td>{{$reports->product_quantity}}  KG</td>
+                <td>{{$reports->product_price}} .BDT</td>
+                <td>{{$reports->subtotal}} .BDT</td>
             </tr>
             @endforeach
         </tbody>
