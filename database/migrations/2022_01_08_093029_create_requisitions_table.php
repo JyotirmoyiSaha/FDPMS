@@ -16,7 +16,7 @@ class CreateRequisitionsTable extends Migration
         Schema::create('requisitions', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
-            $table->string ('date');
+            // $table->string ('date');
             $table->string ('total_price');
             $table->timestamps();
         });

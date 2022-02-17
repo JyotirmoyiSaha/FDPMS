@@ -74,7 +74,6 @@
         <th>Email</th>
         <th>Address</th>
         <th>Contact</th>
-        <th>User type</th>
         <th>Action</th>
     
       </tr>
@@ -89,7 +88,6 @@
         <td>{{$user->email}}</td>
         <td>{{$user->address}}</td>
         <td>{{$user->mobile}}</td>
-        <td>{{$user->type}}</td>
         <td>
           <a class="btn btn-info" href="{{route('admin.user.details',$user->id)}}">View</a>
           <a class="btn btn-danger" href="{{route('admin.user.delete',$user->id)}}">Delete</a>

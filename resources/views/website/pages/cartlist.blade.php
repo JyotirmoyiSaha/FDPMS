@@ -139,10 +139,10 @@
         <label for="lname">Quantity</label>
         <input type="number" id="lname" name="quantity"  class="form-control" placeholder="requist quantity..">
         <br>
-        <div class="form-group">
+        {{-- <div class="form-group">
           <label for="formGroupExampleInput5">Date</label>
           <input name="date" type="date" class="form-control" id="formGroupExampleInput5" placeholder="Date">
-      </div>
+      </div> --}}
       <button type="submit" class="btn btn-primary">submit</button>
   </div>
 </form>
@@ -173,7 +173,7 @@
     </tr>
     @if(isset($carts))
     @if(!empty($carts))
-    {{-- @dd($carts) --}}
+   
     @foreach ($carts as $key=>$cart)
     <tr>
       <td> {{$key+1}} </td>

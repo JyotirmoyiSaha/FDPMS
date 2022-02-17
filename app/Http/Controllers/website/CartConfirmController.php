@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\website;
 
-use Carbon\Carbon;
+// use Carbon\Carbon;
 use App\Models\Requisition;
 use Illuminate\Http\Request;
 use App\Models\RequisitionDetails;
@@ -25,7 +25,7 @@ try{
         'user_id'=>auth()->user()->id,
         // 'status'=>'pending',
         'total_price'=>$total,
-        'date'=>Carbon::now(),
+        // 'date'=>Carbon::now(),
     ]);
 
     // $carts = session('get');

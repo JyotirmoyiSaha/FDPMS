@@ -23,9 +23,9 @@ class RequisitiondetailsController extends Controller
         // dd($id);
         $data = RequisitionDetails::find($id);
     //    dd($data);
-        $data->update([
-            'status'=>request()->action,
-        ]);
+        // $data->update([
+        //     'status'=>request()->action,
+        // ]);
 
 
         //stock calculation
@@ -37,6 +37,10 @@ class RequisitiondetailsController extends Controller
                 'stock_quantity'=>$adminstock->stock_quantity - $data->product_quantity,
     
             ]);
+
+            $data->update([
+                   'status'=>request()->action,
+                 ]);
 
             $requisition=Requisition::find($data->requisition_id);
             $dealerStock=DealerStock::where('product_id',$data->product_id)->where('user_id',$requisition->user_id)->first();
@@ -59,11 +63,11 @@ class RequisitiondetailsController extends Controller
         }
         else
         {
-            return redirect()->back()->with('success','Product quantity not available.');
+            return redirect()->back();
         }
        
 
-        
+        // ->with('success','Product quantity not available.')
         
     }
 }

@@ -23,7 +23,8 @@ class UserprofileController extends Controller
 
     public function userprofileupdate(Request $request,$id)
     {
-        // dd($request->all());
+        
+        
         $profile=User::find($id);
         $profile->update([
             'name'=>$request->name,

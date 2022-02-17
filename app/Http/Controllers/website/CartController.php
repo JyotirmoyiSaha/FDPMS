@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Cart;
 use App\Models\Product;
 use App\Models\ProductCategory;
-use Carbon\Carbon;
+// use Carbon\Carbon;
 
 
 class CartController extends Controller
@@ -42,7 +42,7 @@ class CartController extends Controller
             'product_image'=>$product->product_image,
             'quantity'=>$request->quantity,
             'total_price'=>$product->product_price*$request->quantity,
-            'date' => Carbon::now(),
+            // 'date' => Carbon::now(),
           
          ];
       }

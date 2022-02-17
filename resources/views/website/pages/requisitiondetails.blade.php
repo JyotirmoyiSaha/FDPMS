@@ -30,28 +30,17 @@
   </style>
   <br>
 
-  @if(session()->has('success'))
-<p class="alert alert-success">
-    {{session()->get('success')}}
-</p>
-@endif
-
   <div class="heading">
     <h2>Requisition Detalis</h2>
   </div>
   
   <br>
-  @if(session()->has('success'))
-<p class="alert alert-success">
-    {{session()->get('success')}}
-</p>
-@endif
 
   
   <table id="customers">
     <tr>
       <th>ID</th>
-      <th>Requisition ID</th>
+      {{-- <th>Requisition ID</th> --}}
       <th>Product Name</th>
       <th>Product Quantity</th>
       <th>Product Price</th>
@@ -64,7 +53,7 @@
       @foreach ($requisitiondetails as $key=>$requisitiondetailview)
     <tr>
       <td>{{$key+1}}</td>
-      <td>{{$requisitiondetailview->requisition_id}}</td>
+      {{-- <td>{{$requisitiondetailview->requisition_id}}</td> --}}
       <td>{{$requisitiondetailview->product->product_name}}</td>
       <td>{{$requisitiondetailview->product_quantity}} KG</td>
       <td>{{$requisitiondetailview->product_price}} .BDT</td>

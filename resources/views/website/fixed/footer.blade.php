@@ -12,21 +12,20 @@
                 <p><i class="fa fa fa-envelope"></i> info@example.com </p>
            </div>
            <div class="col-lg-3 col-md-6 col-sm-6 col">
-                <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+                <h5 class="headin5_amrc col_white_amrc pt2">Contact us</h5>
                 <!--headin5_amrc ends here-->
                 <ul class="footer_ul2_amrc">
                     <li>
-                        <a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
-                        <p>Lorem Ipsum is simply dummy printing...<a href="#">https://www.lipsum.com/</a></p>
+                        <p><i class="fa fa-location-arrow"></i> 9878/25 sec 9 rohini 35 </p>
+                       
                     </li>
                     <li>
-                        <a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
-                        <p>Lorem Ipsum is simply dummy printing...<a href="#">https://www.lipsum.com/</a></p>
+                        <p><i class="fa fa-phone"></i> +91-9999878398 </p>
                     </li>
                     <li>
-                        <a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
-                        <p>Lorem Ipsum is simply dummy printing...<a href="#">https://www.lipsum.com/</a></p>
+                        <p><i class="fa fa fa-envelope"></i> info@example.com </p>
                     </li>
+                    
                 </ul>
                 <!--footer_ul2_amrc ends here-->
             </div>
@@ -35,7 +34,6 @@
                 <!--headin5_amrc-->
                 <ul class="footer_ul_amrc">
                     <li><a href="#">Default Version</a></li>
-                    <li><a href="#">Boxed Version</a></li>
                     <li><a href="#">Our Team </a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Our Services</a></li>

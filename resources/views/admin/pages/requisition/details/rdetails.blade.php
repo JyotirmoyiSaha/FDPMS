@@ -66,8 +66,8 @@
       <td>{{$key+1}}</td>
       <td>{{$requisitiondetail->requisition_id}}</td>
       <td>{{$requisitiondetail->product->product_name}}</td>
-      <td>{{$requisitiondetail->product_quantity}}</td>
-      <td>{{$requisitiondetail->product_price}}</td>
+      <td>{{$requisitiondetail->product_quantity}} KG</td>
+      <td>{{$requisitiondetail->product_price}} .BDT</td>
       <td>{{$requisitiondetail->product_quantity * $requisitiondetail->product_price}} .BDT</td>
       <td>
         @if($requisitiondetail->status=='Pending')

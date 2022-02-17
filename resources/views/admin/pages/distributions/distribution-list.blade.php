@@ -42,7 +42,7 @@
   
   <br>
 
-  <a class="btn btn-primary" href="{{route('admin.distribution.create')}}" role="button">Distribute</a>
+  {{-- <a class="btn btn-primary" href="{{route('admin.distribution.create')}}" role="button">Distribute</a> --}}
   <table id="customers">
     <thead>
     <tr>
